@@ -5,7 +5,6 @@ import { ExperienceTabs } from "@/components/ExperienceTabs";
 import { Testimonials } from "@/components/Testimonials";
 import { AmenitiesPanel } from "@/components/AmenitiesPanel";
 import { Faq } from "@/components/Faq";
-import { BlogStrip } from "@/components/BlogStrip";
 import { InstagramStrip } from "@/components/InstagramStrip";
 import { BookCta } from "@/components/BookCta";
 import { IntroSplash } from "@/components/IntroSplash";
@@ -21,7 +20,6 @@ export default function HomePage() {
         <Testimonials />
         <AmenitiesPanel />
         <Faq />
-        <BlogStrip />
         <InstagramStrip />
         <BookCta />
       </main>

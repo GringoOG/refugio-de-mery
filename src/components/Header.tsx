@@ -26,12 +26,12 @@ export function Header({ tone = "auto" }: { tone?: "auto" | "light" | "dark" }) 
       }`}
     >
       <div className="shell relative flex h-[var(--nav-h)] items-center justify-between gap-4">
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-4 xl:gap-5 lg:flex">
           {nav.map((item) => (
             <Link
-              key={item.href}
+              key={`${item.href}-${item.label}`}
               href={item.href}
-              className={`text-[0.84rem] tracking-[0.02em] transition-opacity hover:opacity-70 ${
+              className={`text-[0.82rem] tracking-[0.02em] transition-opacity hover:opacity-70 ${
                 light ? "text-[var(--ink)]" : "text-white"
               }`}
             >

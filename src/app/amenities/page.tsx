@@ -4,7 +4,6 @@ import { Footer } from "@/components/Footer";
 import { AmenitiesPanel } from "@/components/AmenitiesPanel";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
-import { BlogStrip } from "@/components/BlogStrip";
 import { InstagramStrip } from "@/components/InstagramStrip";
 import { BookCta } from "@/components/BookCta";
 
@@ -65,7 +64,6 @@ export default function AmenitiesPage() {
         <AmenitiesPanel />
         <Testimonials />
         <Faq />
-        <BlogStrip />
         <InstagramStrip />
         <BookCta />
       </main>

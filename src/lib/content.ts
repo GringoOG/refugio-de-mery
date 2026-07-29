@@ -12,46 +12,45 @@ export const site = {
 };
 
 export const nav = [
+  { href: "/", label: "Home" },
   { href: "/rooms", label: "Rooms" },
-  { href: "/restaurant", label: "Restaurant" },
-  { href: "/amenities", label: "Amenities" },
-  { href: "/blog", label: "Blogs" },
+  { href: "/tours", label: "Tours" },
+  { href: "/food", label: "Food" },
+  { href: "/products", label: "Products" },
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
 export const footerSitemap = [
-  { href: "/rooms", label: "Sleep" },
-  { href: "/restaurant", label: "Eat" },
-  { href: "/amenities", label: "Play" },
-  { href: "/blog", label: "Blogs" },
+  { href: "/", label: "Home" },
+  { href: "/rooms", label: "Rooms" },
+  { href: "/tours", label: "Tours" },
+  { href: "/food", label: "Food" },
+  { href: "/products", label: "Products" },
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
 export const heroCards = [
   {
-    href: "/restaurant",
-    label: "Farm dining",
-    image: "/photos/foto6.jpg",
-  },
-  {
     href: "/rooms",
-    label: "Private rooms",
-    image: "/photos/foto3.jpg",
+    label: "Accommodation",
+    image: "/photos/accommodation.jpg",
   },
   {
-    href: "/amenities",
-    label: "Coffee farm",
-    image: "/photos/foto12.jpg",
+    href: "/tours",
+    label: "Tour de Café",
+    image: "/photos/tour-de-cafe.jpg",
   },
   {
-    href: "/amenities",
-    label: "Near Machu Picchu",
-    image: "/photos/foto10.jpg",
+    href: "/food",
+    label: "Food",
+    image: "/photos/food.jpg",
   },
   {
-    href: "/amenities",
-    label: "Mountain terrace",
-    image: "/photos/foto7.jpg",
+    href: "/products",
+    label: "Products",
+    image: "/photos/products.jpg",
   },
 ];
 
@@ -61,8 +60,8 @@ export const experienceTabs = [
     label: "RESTAURANT",
     title: "A taste of Lucmabamba, thoughtfully served",
     body: "Flavours grown on the hillside — breakfast and dinner included with every stay, prepared in the moment and shared with mountain air.",
-    cta: "Explore our restaurant",
-    href: "/restaurant",
+    cta: "Explore our food",
+    href: "/food",
     image: "/photos/foto6.jpg",
   },
   {
@@ -79,8 +78,8 @@ export const experienceTabs = [
     label: "PLAY",
     title: "Moments designed beyond the stay.",
     body: "Discover Tour de Café, mountain air, and curated farm moments designed to make every stay memorable.",
-    cta: "Explore our amenities",
-    href: "/amenities",
+    cta: "Explore our tours",
+    href: "/tours",
     image: "/photos/foto12.jpg",
   },
 ];
@@ -152,30 +151,6 @@ export const faqs = [
   {
     q: "Is a credit card required to book?",
     a: "No. Card is not required to reserve, and payment is made at the property.",
-  },
-];
-
-export const blogs = [
-  {
-    category: "Lifestyle",
-    date: "October 2, 2025",
-    title: "Slow mornings on a Lucmabamba coffee terrace",
-    href: "/blog",
-    image: "/photos/foto6.jpg",
-  },
-  {
-    category: "Dining",
-    date: "October 2, 2025",
-    title: "Why farm breakfasts become the memory of the trek",
-    href: "/blog",
-    image: "/photos/foto15.jpg",
-  },
-  {
-    category: "Coffee",
-    date: "October 2, 2025",
-    title: "From cherry to cup: Tour de Café at the refugio",
-    href: "/blog",
-    image: "/photos/foto12.jpg",
   },
 ];
 

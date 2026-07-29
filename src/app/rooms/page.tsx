@@ -4,7 +4,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
-import { BlogStrip } from "@/components/BlogStrip";
 import { InstagramStrip } from "@/components/InstagramStrip";
 import { BookCta } from "@/components/BookCta";
 import { roomPricing, site } from "@/lib/content";
@@ -143,7 +142,6 @@ export default function RoomsPage() {
 
         <Testimonials />
         <Faq />
-        <BlogStrip />
         <InstagramStrip />
         <BookCta />
       </main>
