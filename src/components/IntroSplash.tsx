@@ -1,44 +1,56 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Logo } from "@/components/Logo";
 import { site } from "@/lib/content";
 
 export function IntroSplash() {
-  const [visible, setVisible] = useState(true);
-  const [leaving, setLeaving] = useState(false);
+  const [mounted, setMounted] = useState(true);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const leaveTimer = window.setTimeout(() => setLeaving(true), 1600);
-    const hideTimer = window.setTimeout(() => setVisible(false), 2300);
+    const openTimer = window.setTimeout(() => setOpen(true), 1400);
+    const unmountTimer = window.setTimeout(() => setMounted(false), 2600);
     return () => {
-      window.clearTimeout(leaveTimer);
-      window.clearTimeout(hideTimer);
+      window.clearTimeout(openTimer);
+      window.clearTimeout(unmountTimer);
     };
   }, []);
 
-  if (!visible) return null;
+  if (!mounted) return null;
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black text-white transition-opacity duration-700 ${
-        leaving ? "pointer-events-none opacity-0" : "opacity-100"
-      }`}
-      aria-hidden={leaving}
+      className="fixed inset-0 z-[100] overflow-hidden"
+      aria-hidden={open}
     >
+      {/* Left curtain */}
       <div
-        className={`mb-5 grid h-14 w-14 place-items-center rounded-full border border-white/80 text-[1.2rem] transition duration-700 ${
-          leaving ? "scale-95 opacity-0" : "scale-100 opacity-100"
+        className={`absolute inset-y-0 left-0 w-1/2 bg-black transition-transform duration-[1100ms] ease-[cubic-bezier(0.76,0,0.24,1)] ${
+          open ? "-translate-x-full" : "translate-x-0"
+        }`}
+      />
+
+      {/* Right curtain */}
+      <div
+        className={`absolute inset-y-0 right-0 w-1/2 bg-black transition-transform duration-[1100ms] ease-[cubic-bezier(0.76,0,0.24,1)] ${
+          open ? "translate-x-full" : "translate-x-0"
+        }`}
+      />
+
+      {/* Center brand — fades as curtains part */}
+      <div
+        className={`pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center text-white transition-opacity duration-500 ${
+          open ? "opacity-0" : "opacity-100"
         }`}
       >
-        R
+        <div className="mb-5">
+          <Logo size={72} priority />
+        </div>
+        <p className="eyebrow tracking-[0.22em] text-white/85">
+          {site.fullName.toUpperCase()}
+        </p>
       </div>
-      <p
-        className={`eyebrow tracking-[0.22em] text-white/85 transition duration-700 ${
-          leaving ? "translate-y-2 opacity-0" : "translate-y-0 opacity-100"
-        }`}
-      >
-        {site.fullName.toUpperCase()}
-      </p>
     </div>
   );
 }

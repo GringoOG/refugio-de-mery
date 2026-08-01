@@ -1,70 +1,72 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
+import { ArchPanel } from "@/components/ArchPanel";
+import { BookButton } from "@/components/BookButton";
+import { TransitionLink } from "@/components/TransitionLink";
 import { heroCards, site } from "@/lib/content";
+import { useLocale } from "@/lib/i18n";
+import type { Dictionary } from "@/lib/i18n/types";
+
+const heroCardKeys: (keyof Dictionary["heroCards"])[] = [
+  "accommodation",
+  "tour",
+  "food",
+  "products",
+];
 
 export function Hero() {
-  return (
-    <section className="relative flex h-[100svh] flex-col overflow-hidden bg-[var(--dark)] text-white">
-      <div className="absolute inset-0">
-        <video
-          className="h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/photos/foto3.jpg"
-        >
-          <source src="/video/hero.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black/20" />
-      </div>
+  const { t } = useLocale();
 
-      {/*
-        Montvera-measured @ 1920×1080:
-        nav→panel ≈ 153px · panel→cards ≈ 12px · radius 300px top
-      */}
-      <div className="relative z-[1] mx-auto flex w-full max-w-[1440px] flex-col px-[var(--pad)] pt-[calc(var(--nav-h)+clamp(4.5rem,14vh,9.5rem))]">
-        <div className="arch-panel fade-up bg-[rgba(21,21,21,0.6)] px-8 pb-9 pt-14 text-center sm:px-16 sm:pb-10 sm:pt-16 md:px-24 md:pb-11 md:pt-[4.25rem]">
-          <p className="eyebrow fade-up fade-up-1 text-white">
+  return (
+    <section className="relative z-[1] flex min-h-[100svh] flex-col overflow-hidden text-white">
+      <div className="relative z-[1] mx-auto flex min-h-[100svh] w-full max-w-[1440px] flex-col px-[var(--pad)] pb-[max(0.55rem,env(safe-area-inset-bottom,0px))] pt-[calc(var(--nav-offset)+clamp(0.85rem,3.5svh,4rem))]">
+        <ArchPanel className="flex min-h-0 flex-1 flex-col items-center justify-center bg-[rgba(21,21,21,0.62)] px-5 py-[clamp(0.85rem,2.2svh,2.75rem)] text-center backdrop-blur-[6px] sm:px-14 md:px-24">
+          <p className="eyebrow fade-up fade-up-1 max-w-[20rem] text-balance text-[0.68rem] tracking-[0.16em] text-white sm:max-w-none sm:text-[0.8125rem] sm:tracking-[0.22em]">
             {site.fullName.toUpperCase()}
           </p>
-          <h1 className="display fade-up fade-up-2 mx-auto mt-4 max-w-[18ch] text-[clamp(2.65rem,5.2vw,4.35rem)] text-white">
-            Discover calm on a coffee farm stay
+          <h1 className="display fade-up fade-up-2 mx-auto mt-[clamp(0.4rem,1.1svh,0.9rem)] max-w-[14ch] text-[clamp(1.7rem,5.2vw+1.2svh,4.1rem)] text-white sm:max-w-[16ch]">
+            {t.hero.title}
           </h1>
-          <p className="fade-up fade-up-3 mx-auto mt-5 max-w-[42rem] font-[family-name:var(--font-body)] text-[clamp(0.95rem,1.1vw,1.125rem)] leading-[1.5] text-white/88">
-            Hidden between cloud-forest ridges and coffee trees lies a family
-            refugio designed for slower mornings, deeper rest, and meaningful
-            farm experiences on the route to Machu Picchu.
+          <p className="hero-lede fade-up fade-up-3 mx-auto mt-[clamp(0.45rem,1.2svh,1.1rem)] max-w-[36rem] text-pretty font-[family-name:var(--font-body)] text-[clamp(0.88rem,1.05svh+0.3vw,1.05rem)] leading-[1.5] text-white/88">
+            {t.hero.body}
           </p>
-          <Link
-            href="/rooms"
-            className="btn btn-bronze fade-up fade-up-3 mt-7 sm:mt-8"
+          <BookButton
+            roomSlug="double-bed"
+            source="hero"
+            className="btn btn-bronze fade-up fade-up-3 mt-[clamp(0.55rem,1.5svh,1.65rem)] w-full max-w-[16rem] sm:w-auto"
           >
-            Book your room
-          </Link>
-        </div>
+            {t.common.bookYourRoom}
+          </BookButton>
+          <p className="fade-up fade-up-3 mt-2.5 max-w-[20rem] text-balance text-[clamp(0.82rem,1.4svh+0.2vw,1.375rem)] font-medium leading-snug tracking-[0.01em] text-[var(--cream)] sm:mt-3.5 sm:max-w-[24rem]">
+            {t.hero.bookDirect}
+          </p>
+        </ArchPanel>
 
-        <div className="mt-3 grid grid-cols-2 gap-2 md:mt-3 md:grid-cols-4 md:gap-3">
-          {heroCards.map((card) => (
-            <Link
-              key={card.label}
-              href={card.href}
-              className="group overflow-hidden rounded-[2px] bg-black/35"
-            >
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <Image
-                  src={card.image}
-                  alt={card.label}
-                  fill
-                  className="object-cover transition duration-700 group-hover:scale-[1.03]"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-              </div>
-              <div className="bg-[rgba(12,12,12,0.92)] px-2 py-2 text-center font-[family-name:var(--font-body)] text-[0.78rem] tracking-[0.02em] text-white">
-                {card.label}
-              </div>
-            </Link>
-          ))}
+        <div className="mt-[clamp(0.4rem,1svh,0.75rem)] grid shrink-0 grid-cols-2 gap-1.5 sm:gap-2 lg:grid-cols-4 lg:gap-2.5">
+          {heroCards.map((card, i) => {
+            const label = t.heroCards[heroCardKeys[i]];
+            return (
+              <TransitionLink
+                key={card.href}
+                href={card.href}
+                className="group flex aspect-[6/5] flex-col overflow-hidden rounded-[4px] border border-white/18 bg-[rgba(21,21,21,0.62)] p-[clamp(0.28rem,0.7svh,0.55rem)] pb-0 shadow-[0_12px_40px_rgba(0,0,0,0.28)] backdrop-blur-[6px] transition-colors duration-300 hover:border-white/28 hover:bg-[rgba(21,21,21,0.72)]"
+              >
+                <div className="relative min-h-0 flex-[0.78] overflow-hidden rounded-[3px]">
+                  <Image
+                    src={card.image}
+                    alt={label}
+                    fill
+                    className="object-cover transition duration-700 group-hover:scale-[1.03]"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                </div>
+                <p className="flex flex-[0.22] items-center justify-center px-1 text-center font-[family-name:var(--font-body)] text-[clamp(0.72rem,2.4vw,1.05rem)] font-medium leading-tight tracking-[0.02em] text-white sm:px-2">
+                  {label}
+                </p>
+              </TransitionLink>
+            );
+          })}
         </div>
       </div>
     </section>

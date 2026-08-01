@@ -8,19 +8,30 @@ import { Faq } from "@/components/Faq";
 import { InstagramStrip } from "@/components/InstagramStrip";
 import { BookCta } from "@/components/BookCta";
 import { IntroSplash } from "@/components/IntroSplash";
+import { Reveal } from "@/components/Reveal";
 
 export default function HomePage() {
   return (
     <>
       <IntroSplash />
       <Header />
-      <main>
+      <main className="relative z-[1]">
         <Hero />
-        <ExperienceTabs />
-        <Testimonials />
-        <AmenitiesPanel />
-        <Faq />
-        <InstagramStrip />
+        <Reveal delay={40}>
+          <ExperienceTabs />
+        </Reveal>
+        <Reveal delay={60}>
+          <Testimonials />
+        </Reveal>
+        <Reveal delay={40}>
+          <AmenitiesPanel />
+        </Reveal>
+        <Reveal delay={40}>
+          <Faq />
+        </Reveal>
+        <Reveal delay={40}>
+          <InstagramStrip />
+        </Reveal>
         <BookCta />
       </main>
       <Footer />
