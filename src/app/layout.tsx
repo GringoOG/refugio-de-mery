@@ -53,7 +53,20 @@ export default async function RootLayout({
     <html lang={locale} className={`${display.variable} ${body.variable} h-full`}>
       <head>
         <link rel="preload" as="image" href="/video/hero-poster.jpg" />
-        <link rel="preload" as="video" href="/video/hero.webm" type="video/webm" />
+        <link
+          rel="preload"
+          as="video"
+          href="/video/hero-mobile.mp4"
+          type="video/mp4"
+          media="(max-width: 900px)"
+        />
+        <link
+          rel="preload"
+          as="video"
+          href="/video/hero.mp4"
+          type="video/mp4"
+          media="(min-width: 901px)"
+        />
       </head>
       <body className="min-h-full antialiased">
         <LocaleProvider initialLocale={locale}>

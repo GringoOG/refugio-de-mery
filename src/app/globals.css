@@ -104,6 +104,18 @@ video {
   max-width: 100%;
 }
 
+/* Never show native PLAY / scrubber on background loop */
+.bg-video::-webkit-media-controls,
+.bg-video::-webkit-media-controls-start-playback-button,
+.bg-video::-webkit-media-controls-enclosure {
+  display: none !important;
+  -webkit-appearance: none;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+
 button {
   font: inherit;
   cursor: pointer;

@@ -2,52 +2,97 @@
 
 import { useEffect, useRef, useState } from "react";
 
+function pickSrc() {
+  return window.matchMedia("(max-width: 900px)").matches
+    ? "/video/hero-mobile.mp4"
+    : "/video/hero.mp4";
+}
+
 /**
- * Full-bleed background loop.
- * Poster shows immediately; video fades in once it can play.
- * WebM first (smaller), MP4 fallback — both optimized for fast start.
+ * Full-bleed background loop — autoplays immediately on phone + desktop.
+ * Small MP4, muted/playsInline forced in JS, retries until playing.
  */
 export function BackgroundVideo() {
   const ref = useRef<HTMLVideoElement>(null);
   const [ready, setReady] = useState(false);
+  const [src, setSrc] = useState("/video/hero-mobile.mp4");
+
+  useEffect(() => {
+    setSrc(pickSrc());
+  }, []);
 
   useEffect(() => {
     const video = ref.current;
     if (!video) return;
 
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.setAttribute("muted", "");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "");
+    video.disablePictureInPicture = true;
+
+    let alive = true;
+
+    const markReady = () => {
+      if (alive) setReady(true);
+    };
+
     const tryPlay = () => {
-      void video.play().then(() => setReady(true)).catch(() => {});
+      if (!alive) return;
+      video.muted = true;
+      const p = video.play();
+      if (p) void p.then(markReady).catch(() => {});
     };
 
-    const onCanPlay = () => {
-      setReady(true);
-      tryPlay();
-    };
-
-    video.addEventListener("canplay", onCanPlay);
-    video.addEventListener("playing", () => setReady(true));
-
-    // Kick decode ASAP
-    video.load();
-    tryPlay();
-
+    const onPlaying = () => markReady();
     const onVisible = () => {
       if (document.visibilityState === "visible") tryPlay();
     };
+
+    video.addEventListener("playing", onPlaying);
+    video.addEventListener("canplay", tryPlay);
+    video.addEventListener("loadeddata", tryPlay);
+    tryPlay();
+
+    const unlock = () => tryPlay();
+    window.addEventListener("touchstart", unlock, { passive: true });
+    window.addEventListener("touchend", unlock, { passive: true });
+    window.addEventListener("scroll", unlock, { passive: true });
+    window.addEventListener("pointerdown", unlock, { passive: true });
     document.addEventListener("visibilitychange", onVisible);
 
+    const kick = window.setInterval(() => {
+      if (!alive) return;
+      if (!video.paused) {
+        window.clearInterval(kick);
+        markReady();
+        return;
+      }
+      tryPlay();
+    }, 350);
+    window.setTimeout(() => window.clearInterval(kick), 10000);
+
     return () => {
-      video.removeEventListener("canplay", onCanPlay);
+      alive = false;
+      window.clearInterval(kick);
+      video.removeEventListener("playing", onPlaying);
+      video.removeEventListener("canplay", tryPlay);
+      video.removeEventListener("loadeddata", tryPlay);
+      window.removeEventListener("touchstart", unlock);
+      window.removeEventListener("touchend", unlock);
+      window.removeEventListener("scroll", unlock);
+      window.removeEventListener("pointerdown", unlock);
       document.removeEventListener("visibilitychange", onVisible);
     };
-  }, []);
+  }, [src]);
 
   return (
     <div
       className="pointer-events-none fixed inset-0 z-0 overflow-hidden bg-black"
       aria-hidden
     >
-      {/* Poster stays until frames are ready — no black wait */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
         style={{
@@ -57,19 +102,17 @@ export function BackgroundVideo() {
       />
       <video
         ref={ref}
-        className={`h-full w-full scale-[1.02] object-cover transition-opacity duration-700 ${
-          ready ? "opacity-100" : "opacity-0"
-        }`}
+        className="bg-video h-full w-full scale-[1.02] object-cover"
+        src={src}
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
         poster="/video/hero-poster.jpg"
-      >
-        <source src="/video/hero.webm" type="video/webm" />
-        <source src="/video/hero.mp4" type="video/mp4" />
-      </video>
+        disablePictureInPicture
+        disableRemotePlayback
+      />
       <div className="absolute inset-0 bg-black/28" />
     </div>
   );
