@@ -12,11 +12,26 @@ const media = [
   },
   {
     image: "/photos/testimonial-2.jpg",
+    width: 1050,
+    height: 1400,
+  },
+  {
+    image: "/photos/testimonial-3.jpg",
     width: 1024,
     height: 768,
   },
   {
-    image: "/photos/testimonial-3.jpg",
+    image: "/photos/testimonial-4.jpg",
+    width: 1024,
+    height: 768,
+  },
+  {
+    image: "/photos/testimonial-5.jpg",
+    width: 1024,
+    height: 768,
+  },
+  {
+    image: "/photos/testimonial-6.jpg",
     width: 1024,
     height: 768,
   },
@@ -61,15 +76,6 @@ export function Testimonials() {
 
             <div className="relative flex min-h-0 flex-col justify-between bg-white p-4 sm:p-7 lg:p-8">
               <div className="flex flex-1 flex-col items-center justify-center text-center">
-                <div className="relative mb-4 h-11 w-11 shrink-0 overflow-hidden sm:mb-5 sm:h-12 sm:w-12">
-                  <Image
-                    src={shot.image}
-                    alt=""
-                    fill
-                    className="object-cover"
-                    sizes="48px"
-                  />
-                </div>
                 <p className="max-w-[30rem] text-pretty text-[0.9rem] leading-[1.65] text-[var(--ink-soft)] line-clamp-7 sm:line-clamp-none sm:text-[1.02rem] lg:line-clamp-[11]">
                   {copy.quote}
                 </p>

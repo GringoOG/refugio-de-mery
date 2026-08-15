@@ -76,21 +76,39 @@ export const es: Dictionary = {
     items: [
       {
         quote:
-          "Llegamos agotados tras un largo día en el Salkantay Trek, y Refugio de Mery se sintió como una verdadera pausa. Una ducha caliente, una habitación privada tranquila y la bienvenida más cálida de la familia. El desayuno de la mañana siguiente fue el mejor del camino — guacamole fresco, huevos y espresso tostado en la finca. Se nota el cuidado en cada detalle, desde la hamaca en la terraza hasta el aire de montaña. Nos fuimos descansados, agradecidos y ya planeando volver.",
+          "Llegamos agotados tras el Salkantay, y Refugio de Mery fue una verdadera pausa. Ducha caliente, habitación tranquila, cálida bienvenida — y el desayuno fue el mejor del camino: guacamole, huevos y espresso tostado en la finca. Nos fuimos descansados y ya planeando volver.",
         name: "Miroslav",
         from: "Desde República Checa",
       },
       {
         quote:
-          "Quedarnos con Mery en su finca orgánica de café fue lo mejor de nuestro viaje por Perú. La cena casera y generosa, el desayuno aún mejor, y las camas suaves después de días caminando. Pasamos las tardes en la hamaca de la terraza viendo cambiar el color de las crestas, y las mañanas aprendiendo cómo el café va de la cereza a la taza. Habitaciones limpias, anfitriones amables y un ritmo calmado que nos hizo frenar. Si quieres más que una noche de paso antes de Machu Picchu, este lugar te da una verdadera estadía de finca para recordar.",
+          "Quedarnos con Mery en su finca de café fue lo mejor de nuestro viaje por Perú. Cena casera, un desayuno aún mejor, y mañanas aprendiendo el café de la cereza a la taza. Anfitriones amables y un ritmo calmado — una verdadera estadía de finca.",
         name: "Lenka",
         from: "Desde República Checa",
       },
       {
         quote:
-          "El refugio está justo en la ruta del Salkantay, y aún así se siente lejos del ajetreo del camino. Café fresco de la finca en el desayuno, una cena maravillosa en la mesa familiar, y anfitriones que nos trataron como amigos antes de nuestro día a Machu Picchu. Caminamos entre los cafetales, escuchamos historias de la tierra y dormimos profundamente en una habitación tranquila con vistas. Es el tipo de estadía que se queda contigo — simple, generosa y arraigada en la ladera.",
+          "Justo en la ruta del Salkantay, y aún lejos del ajetreo. Café fresco de la finca en el desayuno, una cena maravillosa en la mesa familiar, y anfitriones que nos trataron como amigos. Simple, generosa y arraigada en la ladera.",
         name: "Sofia",
         from: "Desde España",
+      },
+      {
+        quote:
+          "After days of trail food, a real dinner here felt almost unfair. Generous plates, honest cooking, and farm-roasted coffee — the best cup we had in Peru.",
+        name: "Antoine",
+        from: "Desde Francia",
+      },
+      {
+        quote:
+          "I did not expect food this good on a mountain coffee farm. Warm dinner after the hike, breakfast even better, and mornings with coffee roasted right here.",
+        name: "Klara",
+        from: "Desde Alemania",
+      },
+      {
+        quote:
+          "Between sore legs and Machu Picchu we found real food again. Homemade half-board meals and farm coffee that puts trail sachets to shame.",
+        name: "Jasper",
+        from: "Desde Países Bajos",
       },
     ],
   },

@@ -38,7 +38,7 @@ export function Hero() {
           >
             {t.common.bookYourRoom}
           </BookButton>
-          <p className="fade-up fade-up-3 mt-2.5 max-w-[20rem] text-balance text-[clamp(0.82rem,1.4svh+0.2vw,1.375rem)] font-medium leading-snug tracking-[0.01em] text-[var(--cream)] sm:mt-3.5 sm:max-w-[24rem]">
+          <p className="fade-up fade-up-3 mt-3 max-w-[min(100%,42rem)] text-pretty text-[clamp(0.95rem,1.1vw+0.55svh,1.45rem)] font-semibold leading-snug tracking-[0.01em] text-[var(--cream)] sm:mt-4 sm:max-w-none sm:whitespace-nowrap lg:text-[clamp(1.05rem,1.35vw+0.35svh,1.55rem)]">
             {t.hero.bookDirect}
           </p>
         </ArchPanel>

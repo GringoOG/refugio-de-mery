@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { BookButton } from "@/components/BookButton";
+import { PriceText } from "@/components/PriceText";
 import { useLocale } from "@/lib/i18n";
 
 export type RoomOffer = {
@@ -54,7 +55,11 @@ export function RoomCard({
                         : "border-[var(--line)] text-[var(--ink-soft)]"
                     }`}
                   >
-                    {badge}
+                    {badge.includes("PEN") && badge.includes("USD") ? (
+                      <PriceText value={badge} />
+                    ) : (
+                      badge
+                    )}
                   </span>
                 );
               })}
@@ -81,14 +86,14 @@ export function RoomCard({
           <div className="mt-7 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:items-end sm:justify-between">
             <div className="flex flex-col gap-1">
               <p className="text-[1.02rem] font-semibold tracking-tight text-[var(--ink)] sm:text-xl">
-                {room.priceLabel}{" "}
+                <PriceText value={room.priceLabel} />{" "}
                 <span className="text-sm font-normal text-[var(--ink-muted)]">
                   / {t.common.person} / {t.common.night}
                 </span>
               </p>
               {room.pricePersonsLabel ? (
                 <p className="text-[0.9rem] text-[var(--ink-muted)]">
-                  {room.pricePersonsLabel}
+                  <PriceText value={room.pricePersonsLabel} />
                 </p>
               ) : null}
             </div>

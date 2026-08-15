@@ -11,9 +11,6 @@ import { useLocale } from "@/lib/i18n";
 /** Desktop nav from xl — below that, hamburger. */
 const DESKTOP_NAV_MQ = "(min-width: 1280px)";
 
-const navLeft = nav.slice(0, 3);
-const navRight = nav.slice(3);
-
 export function Header({ tone = "auto" }: { tone?: "auto" | "light" | "dark" }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -65,8 +62,8 @@ export function Header({ tone = "auto" }: { tone?: "auto" | "light" | "dark" }) 
       }`}
     >
       <div className="shell relative flex h-[var(--nav-h)] items-center">
-        {/* Left: hamburger (mobile) or left nav links */}
-        <div className="z-[1] flex min-w-0 flex-1 items-center justify-start">
+        {/* Left: hamburger (mobile) or all nav links */}
+        <div className="z-[1] flex min-w-0 flex-1 items-center justify-start pr-16 xl:pr-20">
           <button
             type="button"
             className={`relative z-10 grid h-11 w-11 shrink-0 place-items-center rounded-[4px] xl:hidden ${
@@ -97,8 +94,8 @@ export function Header({ tone = "auto" }: { tone?: "auto" | "light" | "dark" }) 
             </span>
           </button>
 
-          <nav className="hidden min-w-0 items-center gap-3 xl:flex 2xl:gap-5">
-            {navLeft.map((item) => (
+          <nav className="hidden min-w-0 items-center gap-2.5 xl:flex 2xl:gap-4">
+            {nav.map((item) => (
               <TransitionLink
                 key={item.href}
                 href={item.href}
@@ -124,19 +121,8 @@ export function Header({ tone = "auto" }: { tone?: "auto" | "light" | "dark" }) 
           />
         </TransitionLink>
 
-        {/* Right: remaining links + Book + language */}
-        <div className="z-[1] flex min-w-0 flex-1 items-center justify-end gap-2 sm:gap-2.5 xl:gap-3 2xl:gap-4">
-          <nav className="hidden min-w-0 items-center gap-3 xl:flex 2xl:gap-5">
-            {navRight.map((item) => (
-              <TransitionLink
-                key={item.href}
-                href={item.href}
-                className={linkClass}
-              >
-                {t.nav[item.key]}
-              </TransitionLink>
-            ))}
-          </nav>
+        {/* Right: Book + language only */}
+        <div className="z-[1] flex shrink-0 items-center justify-end gap-2 sm:gap-2.5 xl:gap-3">
           <BookButton
             source="navbar"
             className="btn btn-bronze !min-h-0 max-[359px]:hidden whitespace-nowrap px-2.5 py-2 text-[0.68rem] sm:px-4 sm:text-[0.75rem]"

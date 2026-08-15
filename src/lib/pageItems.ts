@@ -146,13 +146,6 @@ export const tourPhotos: {
     height: 684,
   },
   {
-    id: "host-balcony",
-    src: "/photos/tour/host-balcony.jpg",
-    alt: "Host on the lodge balcony overlooking the coffee forest",
-    width: 1024,
-    height: 682,
-  },
-  {
     id: "foto15",
     src: "/photos/tour/foto15.jpg",
     alt: "Pouring ripe coffee cherries into the farm pulping machine",
@@ -238,6 +231,7 @@ export const foodItems: SplitItem[] = [
       "A warm farm dessert to finish the meal — rich sauce, caramelised fruit, and a crisp chocolate touch.",
     image: "/photos/food/dessert-main.jpg",
     images: ["/photos/food/dessert-detail.jpg"],
+    imageFit: "contain",
     features: ["Homemade on the farm", "Served with half-board meals"],
   },
 ];

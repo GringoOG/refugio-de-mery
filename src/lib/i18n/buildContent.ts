@@ -48,6 +48,7 @@ const splitMedia: Record<
   dessert: {
     image: "/photos/food/dessert-main.jpg",
     images: ["/photos/food/dessert-detail.jpg"],
+    imageFit: "contain",
   },
   coffee: {
     image: "/photos/products/coffee-bag.jpg",

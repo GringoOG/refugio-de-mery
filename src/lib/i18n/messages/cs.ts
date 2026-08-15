@@ -75,21 +75,39 @@ export const cs: Dictionary = {
     items: [
       {
         quote:
-          "Přijeli jsme vyčerpaní po dlouhém dni na Salkantay Treku a Refugio de Mery byl opravdový oddych. Horká sprcha, tichý soukromý pokoj a to nejvřelejší přivítání od rodiny. Snídaně druhý den byla nejlepší na celé trase — čerstvé guacamole, vejce a espresso pražené na farmě. V každém detailu cítíte péči, od houpací sítě na terase po horský vzduch za dveřmi. Odjížděli jsme odpočatí, vděční a už s plánem se vrátit.",
+          "Přijeli jsme vyčerpaní po Salkantay a Refugio de Mery byl opravdový oddych. Horká sprcha, tichý pokoj, vřelé přivítání — a snídaně byla nejlepší na trase: guacamole, vejce a espresso pražené na farmě. Odjížděli jsme odpočatí a už s plánem se vrátit.",
         name: "Miroslav",
         from: "Z České republiky",
       },
       {
         quote:
-          "Pobyt u Mery na její bio kávové farmě byl vrcholem naší cesty po Peru. Večeře byla domácí a štědrá, snídaně ještě lepší a postele měkké po dnech chůze. Večery jsme trávili v houpací síti na terase a sledovali, jak hřebeny mění barvu, rána jsme se učili, jak káva putuje od třešně ke šálku. Čisté pokoje, milí hostitelé a klidný rytmus, který nás zpomalil. Pokud chcete víc než jen přespání před Machu Picchu, toto místo nabízí opravdový farmářský pobyt, na který se nezapomíná.",
+          "Pobyt u Mery na kávové farmě byl vrcholem naší cesty po Peru. Domácí večeře, ještě lepší snídaně a rána s kávou od třešně ke šálku. Milí hostitelé a klidný rytmus — opravdový farmářský pobyt.",
         name: "Lenka",
         from: "Z České republiky",
       },
       {
         quote:
-          "Refugio leží přímo na trase Salkantay, a přesto působí daleko od spěchu stezky. Čerstvá káva z farmy ke snídani, úžasná večeře u rodinného stolu a hostitelé, kteří s námi jednali jako s přáteli před naším dnem na Machu Picchu. Prošli jsme kávovými pozemky, poslouchali příběhy o zemi a spali hluboce v tichém pokoji s výhledem na hory. Je to pobyt, který zůstane — jednoduchý, štědrý a zakořeněný ve svahu.",
+          "Přímo na trase Salkantay, a přesto daleko od spěchu. Čerstvá káva z farmy ke snídani, skvělá večeře u rodinného stolu a hostitelé jako přátelé. Jednoduché, štědré a zakořeněné ve svahu.",
         name: "Sofia",
         from: "Ze Španělska",
+      },
+      {
+        quote:
+          "After days of trail food, a real dinner here felt almost unfair. Generous plates, honest cooking, and farm-roasted coffee — the best cup we had in Peru.",
+        name: "Antoine",
+        from: "Z Francie",
+      },
+      {
+        quote:
+          "I did not expect food this good on a mountain coffee farm. Warm dinner after the hike, breakfast even better, and mornings with coffee roasted right here.",
+        name: "Klara",
+        from: "Z Německa",
+      },
+      {
+        quote:
+          "Between sore legs and Machu Picchu we found real food again. Homemade half-board meals and farm coffee that puts trail sachets to shame.",
+        name: "Jasper",
+        from: "Z Nizozemska",
       },
     ],
   },

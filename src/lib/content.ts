@@ -107,7 +107,7 @@ export const experienceTabs = [
 export const testimonials = [
   {
     quote:
-      "We arrived exhausted after a long day on the Salkantay Trek, and Refugio de Mery felt like a true pause. A hot shower, a quiet private room, and the warmest welcome from the family. Breakfast the next morning was the best we had on the trail — fresh guacamole, eggs, and espresso roasted on the farm. You can taste the care in every detail, from the hammock on the terrace to the mountain air outside the door. We left rested, grateful, and already planning to return.",
+      "We arrived exhausted after the Salkantay, and Refugio de Mery felt like a true pause. Hot shower, quiet room, warm welcome — and breakfast was the best on the trail: guacamole, eggs, and farm-roasted espresso. We left rested and already planning to return.",
     name: "Miroslav",
     from: "From Czech Republic",
     image: "/photos/testimonial-1.jpg",
@@ -116,21 +116,48 @@ export const testimonials = [
   },
   {
     quote:
-      "Staying with Mery on her organic coffee farm was the highlight of our Peru trip. Dinner was homemade and generous, breakfast even better, and the beds were soft after days of walking. We spent evenings on the terrace hammock watching the ridges change colour, and mornings learning how coffee moves from cherry to cup. Clean rooms, kind hosts, and a calm rhythm that made us slow down. If you want more than a night stop before Machu Picchu, this place gives you a real farm stay to remember.",
+      "Staying with Mery on her coffee farm was the highlight of our Peru trip. Homemade dinner, an even better breakfast, and mornings learning coffee from cherry to cup. Kind hosts and a calm rhythm — a real farm stay to remember.",
     name: "Lenka",
     from: "From Czech Republic",
     image: "/photos/testimonial-2.jpg",
-    width: 1800,
-    height: 1350,
+    width: 1050,
+    height: 1400,
   },
   {
     quote:
-      "The refugio sits right on the Salkantay route, yet it feels far from the rush of the trail. Fresh farm coffee at breakfast, an amazing dinner shared at the family table, and hosts who treated us like friends before our day to Machu Picchu. We walked through the coffee plots, listened to stories about the land, and slept deeply in a quiet room with mountain views. It is the kind of stay that stays with you — simple, generous, and rooted in the hillside.",
+      "Right on the Salkantay route, yet far from the rush. Fresh farm coffee at breakfast, a wonderful dinner at the family table, and hosts who treated us like friends. Simple, generous, and rooted in the hillside.",
     name: "Sofia",
     from: "From Spain",
     image: "/photos/testimonial-3.jpg",
     width: 1410,
     height: 1800,
+  },
+  {
+    quote:
+      "After days of trail food, a real dinner here felt almost unfair. Generous plates, honest cooking, and farm-roasted coffee — the best cup we had in Peru.",
+    name: "Antoine",
+    from: "From France",
+    image: "/photos/testimonial-4.jpg",
+    width: 1024,
+    height: 768,
+  },
+  {
+    quote:
+      "I did not expect food this good on a mountain coffee farm. Warm dinner after the hike, breakfast even better, and mornings with coffee roasted right here.",
+    name: "Klara",
+    from: "From Germany",
+    image: "/photos/testimonial-5.jpg",
+    width: 1024,
+    height: 768,
+  },
+  {
+    quote:
+      "Between sore legs and Machu Picchu we found real food again. Homemade half-board meals and farm coffee that puts trail sachets to shame.",
+    name: "Jasper",
+    from: "From the Netherlands",
+    image: "/photos/testimonial-6.jpg",
+    width: 1024,
+    height: 768,
   },
 ];
 

@@ -75,21 +75,39 @@ export const de: Dictionary = {
     items: [
       {
         quote:
-          "Wir kamen erschöpft nach einem langen Tag auf dem Salkantay Trek an, und Refugio de Mery fühlte sich wie eine echte Pause an. Eine heiße Dusche, ein ruhiges Privatzimmer und der herzlichste Empfang der Familie. Das Frühstück am nächsten Morgen war das beste auf dem Weg — frische Guacamole, Eier und Espresso, geröstet auf der Farm. Man schmeckt die Sorgfalt in jedem Detail, von der Hängematte auf der Terrasse bis zur Bergluft vor der Tür. Wir gingen ausgeruht, dankbar und schon mit dem Plan, wiederzukommen.",
+          "Wir kamen erschöpft vom Salkantay an, und Refugio de Mery war eine echte Pause. Heiße Dusche, ruhiges Zimmer, herzlicher Empfang — und das Frühstück war das beste auf dem Weg: Guacamole, Eier und Farm-Espresso. Wir gingen ausgeruht und schon mit dem Plan zurückzukehren.",
         name: "Miroslav",
         from: "Aus Tschechien",
       },
       {
         quote:
-          "Der Aufenthalt bei Mery auf ihrer Bio-Kaffeefarm war das Highlight unserer Peru-Reise. Das Abendessen war hausgemacht und großzügig, das Frühstück noch besser, und die Betten weich nach Tagen des Gehens. Abends sahen wir von der Terrassen-Hängematte aus, wie die Bergrücken die Farbe wechselten, morgens lernten wir den Weg von der Kirsche zur Tasse. Saubere Zimmer, freundliche Gastgeber und ein ruhiger Rhythmus, der uns verlangsamte. Wenn Sie mehr als nur eine Übernachtung vor Machu Picchu wollen, bietet dieser Ort einen echten Farmaufenthalt zum Erinnern.",
+          "Der Aufenthalt bei Mery auf ihrer Kaffeefarm war das Highlight unserer Peru-Reise. Hausgemachtes Abendessen, noch besseres Frühstück und Morgen, an denen wir den Weg von der Kirsche zur Tasse lernten. Freundliche Gastgeber und ruhiger Rhythmus — ein echter Farmaufenthalt.",
         name: "Lenka",
         from: "Aus Tschechien",
       },
       {
         quote:
-          "Das Refugio liegt direkt an der Salkantay-Route und fühlt sich doch weit weg vom Trubel des Trails an. Frischer Farmkaffee zum Frühstück, ein wunderbares Abendessen am Familientisch und Gastgeber, die uns wie Freunde behandelten vor unserem Tag nach Machu Picchu. Wir gingen durch die Kaffeeplantagen, hörten Geschichten über das Land und schliefen tief in einem ruhigen Zimmer mit Bergblick. Es ist die Art Aufenthalt, die bleibt — einfach, großzügig und verwurzelt am Hang.",
+          "Direkt an der Salkantay-Route, und doch weit vom Trubel. Frischer Farmkaffee zum Frühstück, ein wunderbares Abendessen am Familientisch und Gastgeber wie Freunde. Einfach, großzügig und verwurzelt am Hang.",
         name: "Sofia",
         from: "Aus Spanien",
+      },
+      {
+        quote:
+          "After days of trail food, a real dinner here felt almost unfair. Generous plates, honest cooking, and farm-roasted coffee — the best cup we had in Peru.",
+        name: "Antoine",
+        from: "Aus Frankreich",
+      },
+      {
+        quote:
+          "I did not expect food this good on a mountain coffee farm. Warm dinner after the hike, breakfast even better, and mornings with coffee roasted right here.",
+        name: "Klara",
+        from: "Aus Deutschland",
+      },
+      {
+        quote:
+          "Between sore legs and Machu Picchu we found real food again. Homemade half-board meals and farm coffee that puts trail sachets to shame.",
+        name: "Jasper",
+        from: "Aus den Niederlanden",
       },
     ],
   },
