@@ -125,6 +125,13 @@ export const tourPhotos: {
     height: 1024,
   },
   {
+    id: "guest-hand-grinder",
+    src: "/photos/tour/guest-hand-grinder.jpg",
+    alt: "Guest grinding coffee on the terrace overlooking the mountains",
+    width: 768,
+    height: 1024,
+  },
+  {
     id: "serving-coffee",
     src: "/photos/tour/serving-coffee.jpg",
     alt: "Pouring fresh farm coffee at the lodge table",
