@@ -5,12 +5,30 @@ import Link from "next/link";
 import { useLocale } from "@/lib/i18n";
 
 const shots = [
-  "/photos/foto3.jpg",
-  "/photos/foto6.jpg",
-  "/photos/foto12.jpg",
-  "/photos/foto7.jpg",
-  "/photos/foto15.jpg",
-  "/photos/foto10.jpg",
+  {
+    src: "/photos/foto3.jpg",
+    alt: "Refugio de Mery lodge and coffee farm in Lucmabamba",
+  },
+  {
+    src: "/photos/foto6.jpg",
+    alt: "Farm table and mountain stay atmosphere",
+  },
+  {
+    src: "/photos/foto12.jpg",
+    alt: "Coffee cherries and hillside plots near Salkantay",
+  },
+  {
+    src: "/photos/foto7.jpg",
+    alt: "Guests and hosts at the coffee farm refugio",
+  },
+  {
+    src: "/photos/foto15.jpg",
+    alt: "Processing ripe coffee cherries on the farm",
+  },
+  {
+    src: "/photos/foto10.jpg",
+    alt: "Homemade food at Refugio de Mery",
+  },
 ];
 
 export function InstagramStrip() {
@@ -32,11 +50,11 @@ export function InstagramStrip() {
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
-            {shots.map((src) => (
-              <div key={src} className="relative aspect-square overflow-hidden">
+            {shots.map((shot) => (
+              <div key={shot.src} className="relative aspect-square overflow-hidden">
                 <Image
-                  src={src}
-                  alt=""
+                  src={shot.src}
+                  alt={shot.alt}
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 16vw"

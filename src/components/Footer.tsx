@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { TransitionLink } from "@/components/TransitionLink";
-import { footerSitemap, site } from "@/lib/content";
+import { footerSitemap, hasPublicPhone, site } from "@/lib/content";
 import { useLocale } from "@/lib/i18n";
 
 function FooterHeading({ children }: { children: string }) {
@@ -40,12 +40,14 @@ export function Footer() {
           >
             {site.email}
           </a>
-          <a
-            href={`tel:${site.phone.replace(/\s/g, "")}`}
-            className="mt-2 block text-[0.95rem] text-white/80 hover:text-white"
-          >
-            {site.phone}
-          </a>
+          {hasPublicPhone() ? (
+            <a
+              href={`tel:${site.phone.replace(/\s/g, "")}`}
+              className="mt-2 block text-[0.95rem] text-white/80 hover:text-white"
+            >
+              {site.phone}
+            </a>
+          ) : null}
         </div>
 
         <div>

@@ -35,8 +35,9 @@ export const fr: Dictionary = {
     fromFarmWalk: "De la visite de la ferme",
   },
   hero: {
+    location: "Lucmabamba · Salkantay Trek · Machu Picchu",
     title: "Découvrez le calme d’un séjour en ferme caféière",
-    body: "Caché entre les crêtes de la forêt nuageuse et les caféiers, un refuge familial pour des matins plus lents, un repos plus profond et des expériences de ferme sur la route vers le Machu Picchu.",
+    body: "Hébergement familial dans une ferme de café à Lucmabamba sur le trek du Salkantay — chambres privées, repas de ferme et Tour de Café près du Machu Picchu.",
     bookDirect: "Réservez directement sur notre site et payez moins que sur Booking.com",
   },
   heroCards: {
@@ -75,7 +76,7 @@ export const fr: Dictionary = {
     items: [
       {
         quote:
-          "Nous sommes arrivés épuisés après le Salkantay, et Refugio de Mery a été une vraie pause. Douche chaude, chambre tranquille, accueil chaleureux — et le petit-déjeuner était le meilleur du chemin : guacamole, œufs et espresso torréfié à la ferme. Nous sommes partis reposés, déjà prêts à revenir.",
+          "Nous sommes arrivés épuisés après le Salkantay, et Refugio de Mery a été une vraie pause. Douche chaude, chambre tranquille, accueil chaleureux — et le petit-déjeuner était le meilleur du chemin : guacamole, œufs et espresso torréfié à la ferme.",
         name: "Miroslav",
         from: "De République tchèque",
       },
@@ -382,7 +383,7 @@ export const fr: Dictionary = {
       message: "Message",
       namePh: "Jeanne Dupont",
       emailPh: "jeanne@email.com",
-      phonePh: "+51 900 000 000",
+      phonePh: "+51 …",
       subjectPh: "demande concernant",
       messagePh: "Votre message ici",
     },

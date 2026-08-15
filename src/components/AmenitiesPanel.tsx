@@ -25,7 +25,7 @@ export function AmenitiesPanel() {
           <div className="relative min-h-[240px] overflow-hidden rounded-[4px] sm:min-h-[320px] md:min-h-[420px]">
             <Image
               src="/photos/amenities-terrace.jpg"
-              alt={t.amenities.title}
+              alt="Terrace and common spaces at Refugio de Mery in Lucmabamba"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"

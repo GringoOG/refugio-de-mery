@@ -63,6 +63,7 @@ export type Dictionary = {
     fromFarmWalk: string;
   };
   hero: {
+    location: string;
     title: string;
     body: string;
     bookDirect: string;

@@ -35,8 +35,9 @@ export const en: Dictionary = {
     fromFarmWalk: "From the farm walk",
   },
   hero: {
+    location: "Lucmabamba · Salkantay Trek · Machu Picchu",
     title: "Discover calm on a coffee farm stay",
-    body: "Hidden between cloud-forest ridges and coffee trees lies a family refugio for slower mornings, deeper rest, and farm experiences on the route to Machu Picchu.",
+    body: "A family coffee farm stay in Lucmabamba on the Salkantay Trek — private rooms, farm meals, and Tour de Café for slower mornings and deeper rest near Machu Picchu.",
     bookDirect: "Book direct on our website and pay less than on Booking.com",
   },
   heroCards: {
@@ -75,7 +76,7 @@ export const en: Dictionary = {
     items: [
       {
         quote:
-          "We arrived exhausted after the Salkantay, and Refugio de Mery felt like a true pause. Hot shower, quiet room, warm welcome — and breakfast was the best on the trail: guacamole, eggs, and farm-roasted espresso. We left rested and already planning to return.",
+          "We arrived exhausted after the Salkantay, and Refugio de Mery felt like a true pause. Hot shower, quiet room, warm welcome — and breakfast was the best on the trail: guacamole, eggs, and farm-roasted espresso.",
         name: "Miroslav",
         from: "From Czech Republic",
       },
@@ -173,7 +174,7 @@ export const en: Dictionary = {
   rooms: {
     pageTitle: "Rooms",
     pageBody:
-      "Five rooms on the coffee farm — one matrimonial, one double (twin), two triples, and one single. Always 70 PEN per person, with breakfast and dinner included.",
+      "Ideal rest stop on the Salkantay Trek in Lucmabamba — five private rooms with hot showers, mountain quiet, and half board. Always 70 PEN per person.",
     pageCta: "Explore our rooms",
     amenities: [
       "Private bathroom",
@@ -231,7 +232,7 @@ export const en: Dictionary = {
   tours: {
     pageTitle: "Tours",
     pageBody:
-      "Walk Tour de Café from cherry to cup — organic coffee, mountain air, and family hospitality on the hillside.",
+      "Coffee tour Lucmabamba: Tour de Café from cherry to cup — harvest, farm roasting, tasting, and family hospitality on the Salkantay hillside.",
     pageCta: "Explore our tours",
     items: [
       {
@@ -239,7 +240,7 @@ export const en: Dictionary = {
         eyebrow: "Signature experience",
         title: "Tour de Café",
         blurb:
-          "Walk the coffee process from cherry to cup on the hillside where you sleep — growing, drying, roasting, and tasting. You roast a generous batch yourself as part of the tour.",
+          "Hands-on coffee farm experience in Lucmabamba — growing, drying, roasting, tasting, and farm hospitality. You roast a generous batch yourself on the hillside where you sleep.",
         features: [
           "Guided farm walk",
           "From cherry to cup",
@@ -371,7 +372,7 @@ export const en: Dictionary = {
   contact: {
     pageTitle: "Contact",
     pageBody:
-      "Write or call for rooms, Tour de Café, or stay details — Refugio de Mery Lucmabamba on the Salkantay route.",
+      "Write to us about rooms, Tour de Café, or stay details — Refugio de Mery Lucmabamba on the Salkantay route.",
     pageCta: "Get in touch",
     form: {
       name: "Name",
@@ -381,7 +382,7 @@ export const en: Dictionary = {
       message: "Message",
       namePh: "Jane Smith",
       emailPh: "jane@email.com",
-      phonePh: "+51 900 000 000",
+      phonePh: "+51 …",
       subjectPh: "enquiry about",
       messagePh: "Message goes here",
     },

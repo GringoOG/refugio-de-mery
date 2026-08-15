@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ArchPanel } from "@/components/ArchPanel";
 import { BookButton } from "@/components/BookButton";
 import { TransitionLink } from "@/components/TransitionLink";
-import { heroCards, site } from "@/lib/content";
+import { heroCards } from "@/lib/content";
 import { useLocale } from "@/lib/i18n";
 import type { Dictionary } from "@/lib/i18n/types";
 
@@ -22,13 +22,13 @@ export function Hero() {
     <section className="relative z-[1] flex min-h-[100svh] flex-col overflow-hidden text-white">
       <div className="relative z-[1] mx-auto flex min-h-[100svh] w-full max-w-[1440px] flex-col px-[var(--pad)] pb-[max(0.55rem,env(safe-area-inset-bottom,0px))] pt-[calc(var(--nav-offset)+clamp(0.85rem,3.5svh,4rem))]">
         <ArchPanel className="flex min-h-0 flex-1 flex-col items-center justify-center bg-[rgba(21,21,21,0.62)] px-5 py-[clamp(0.85rem,2.2svh,2.75rem)] text-center backdrop-blur-[6px] sm:px-14 md:px-24">
-          <p className="eyebrow fade-up fade-up-1 max-w-[20rem] text-balance text-[0.68rem] tracking-[0.16em] text-white sm:max-w-none sm:text-[0.8125rem] sm:tracking-[0.22em]">
-            {site.fullName.toUpperCase()}
+          <p className="eyebrow fade-up fade-up-1 max-w-[22rem] text-balance text-[0.68rem] tracking-[0.14em] text-white/90 sm:max-w-none sm:text-[0.8125rem] sm:tracking-[0.2em]">
+            {t.hero.location}
           </p>
           <h1 className="display fade-up fade-up-2 mx-auto mt-[clamp(0.4rem,1.1svh,0.9rem)] max-w-[14ch] text-[clamp(1.7rem,5.2vw+1.2svh,4.1rem)] text-white sm:max-w-[16ch]">
             {t.hero.title}
           </h1>
-          <p className="hero-lede fade-up fade-up-3 mx-auto mt-[clamp(0.45rem,1.2svh,1.1rem)] max-w-[36rem] text-pretty font-[family-name:var(--font-body)] text-[clamp(0.88rem,1.05svh+0.3vw,1.05rem)] leading-[1.5] text-white/88">
+          <p className="hero-lede fade-up fade-up-3 mx-auto mt-[clamp(0.45rem,1.2svh,1.1rem)] max-w-[38rem] text-pretty font-[family-name:var(--font-body)] text-[clamp(0.88rem,1.05svh+0.3vw,1.05rem)] leading-[1.5] text-white/88">
             {t.hero.body}
           </p>
           <BookButton

@@ -35,8 +35,9 @@ export const cs: Dictionary = {
     fromFarmWalk: "Z prohlídky farmy",
   },
   hero: {
+    location: "Lucmabamba · Salkantay Trek · Machu Picchu",
     title: "Objevte klid pobytu na kávové farmě",
-    body: "Skrytý mezi hřebeny mlžného lesa a kávovníky leží rodinný refugio pro pomalejší rána, hlubší odpočinek a zážitky z farmy na cestě k Machu Picchu.",
+    body: "Rodinné ubytování na kávové farmě v Lucmabambě na trase Salkantay — soukromé pokoje, jídlo z farmy a Tour de Café blízko Machu Picchu.",
     bookDirect: "Rezervujte přímo na našem webu a zaplaťte méně než na Booking.com",
   },
   heroCards: {
@@ -75,7 +76,7 @@ export const cs: Dictionary = {
     items: [
       {
         quote:
-          "Přijeli jsme vyčerpaní po Salkantay a Refugio de Mery byl opravdový oddych. Horká sprcha, tichý pokoj, vřelé přivítání — a snídaně byla nejlepší na trase: guacamole, vejce a espresso pražené na farmě. Odjížděli jsme odpočatí a už s plánem se vrátit.",
+          "Přijeli jsme vyčerpaní po Salkantay a Refugio de Mery byl opravdový oddych. Horká sprcha, tichý pokoj, vřelé přivítání — a snídaně byla nejlepší na trase: guacamole, vejce a espresso pražené na farmě.",
         name: "Miroslav",
         from: "Z České republiky",
       },
@@ -382,7 +383,7 @@ export const cs: Dictionary = {
       message: "Zpráva",
       namePh: "Jana Nováková",
       emailPh: "jana@email.com",
-      phonePh: "+51 900 000 000",
+      phonePh: "+51 …",
       subjectPh: "dotaz ohledně",
       messagePh: "Vaše zpráva zde",
     },

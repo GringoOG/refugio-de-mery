@@ -4,11 +4,19 @@ export const site = {
   tagline: "Coffee farm lodging on the Salkantay Trek",
   location: "Lucmabamba, Sahuayacu · La Convención, Peru",
   email: "stay@refugiodemery.com",
-  phone: "+51 984 000 000",
+  /**
+   * Public phone / WhatsApp. Leave empty until the client provides a real number —
+   * never publish placeholder digits (hurts trust + local SEO).
+   */
+  phone: "",
   /** Farm pin used for embedded maps */
   lat: -13.212081,
   lng: -72.614829,
 };
+
+export function hasPublicPhone() {
+  return Boolean(site.phone?.trim()) && !/000[\s-]*000/.test(site.phone);
+}
 
 /** Google Maps embed for the farm pin. */
 export function farmMapEmbedSrc(zoom = 15, hl = "en") {
@@ -107,7 +115,7 @@ export const experienceTabs = [
 export const testimonials = [
   {
     quote:
-      "We arrived exhausted after the Salkantay, and Refugio de Mery felt like a true pause. Hot shower, quiet room, warm welcome — and breakfast was the best on the trail: guacamole, eggs, and farm-roasted espresso. We left rested and already planning to return.",
+      "We arrived exhausted after the Salkantay, and Refugio de Mery felt like a true pause. Hot shower, quiet room, warm welcome — and breakfast was the best on the trail: guacamole, eggs, and farm-roasted espresso.",
     name: "Miroslav",
     from: "From Czech Republic",
     image: "/photos/testimonial-1.jpg",

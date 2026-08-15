@@ -35,8 +35,9 @@ export const es: Dictionary = {
     fromFarmWalk: "Del recorrido por la finca",
   },
   hero: {
+    location: "Lucmabamba · Salkantay Trek · Machu Picchu",
     title: "Descubre la calma en una finca de café",
-    body: "Entre las crestas del bosque nublado y los cafetales se esconde un refugio familiar para mañanas más lentas, un descanso profundo y experiencias de finca en la ruta a Machu Picchu.",
+    body: "Hospedaje familiar en finca de café en Lucmabamba, ruta Salkantay — habitaciones privadas, comida de finca y Tour de Café cerca de Machu Picchu.",
     bookDirect:
       "Reserva directo en nuestra web y paga menos que en Booking.com",
   },
@@ -76,7 +77,7 @@ export const es: Dictionary = {
     items: [
       {
         quote:
-          "Llegamos agotados tras el Salkantay, y Refugio de Mery fue una verdadera pausa. Ducha caliente, habitación tranquila, cálida bienvenida — y el desayuno fue el mejor del camino: guacamole, huevos y espresso tostado en la finca. Nos fuimos descansados y ya planeando volver.",
+          "Llegamos agotados tras el Salkantay, y Refugio de Mery fue una verdadera pausa. Ducha caliente, habitación tranquila, cálida bienvenida — y el desayuno fue el mejor del camino: guacamole, huevos y espresso tostado en la finca.",
         name: "Miroslav",
         from: "Desde República Checa",
       },
@@ -175,7 +176,7 @@ export const es: Dictionary = {
   rooms: {
     pageTitle: "Habitaciones",
     pageBody:
-      "Cinco habitaciones en la finca — una matrimonial, una doble, dos triples y una simple. Siempre 70 PEN por persona, con desayuno y cena incluidos.",
+      "Parada ideal en el Salkantay Trek en Lucmabamba — cinco habitaciones privadas con ducha caliente, calma de montaña y media pensión. Siempre 70 PEN por persona.",
     pageCta: "Explorar habitaciones",
     amenities: [
       "Baño privado",
@@ -234,7 +235,7 @@ export const es: Dictionary = {
   tours: {
     pageTitle: "Tours",
     pageBody:
-      "Recorre el Tour de Café de la cereza a la taza — café orgánico, aire de montaña y hospitalidad familiar en la ladera.",
+      "Tour de café Lucmabamba: Tour de Café de la cereza a la taza — cosecha, tostado en la finca, degustación y hospitalidad familiar en la ruta Salkantay.",
     pageCta: "Explorar tours",
     items: [
       {
@@ -379,7 +380,7 @@ export const es: Dictionary = {
   contact: {
     pageTitle: "Contacto",
     pageBody:
-      "Escríbenos o llámanos por habitaciones, Tour de Café o detalles de la estadía — Refugio de Mery Lucmabamba en la ruta del Salkantay.",
+      "Escríbenos por habitaciones, Tour de Café o detalles de la estadía — Refugio de Mery Lucmabamba en la ruta del Salkantay.",
     pageCta: "Contáctanos",
     form: {
       name: "Nombre",
@@ -389,7 +390,7 @@ export const es: Dictionary = {
       message: "Mensaje",
       namePh: "Ana García",
       emailPh: "ana@email.com",
-      phonePh: "+51 900 000 000",
+      phonePh: "+51 …",
       subjectPh: "consulta sobre",
       messagePh: "Escribe tu mensaje aquí",
     },

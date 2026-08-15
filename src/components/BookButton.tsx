@@ -12,9 +12,19 @@ type BookButtonProps = {
   onNavigate?: () => void;
 };
 
+function isPlaceholderBookingUrl(url: string) {
+  return (
+    !url ||
+    /BOOKING-URL|example\.com|localhost|invalid/i.test(url) ||
+    url === "/" ||
+    url === "#"
+  );
+}
+
 /**
  * Provider-agnostic book CTA.
  * UI never knows QloApps / Agoda / custom — only BookingService.
+ * If booking base URL is still a placeholder, fall back to /contact (trust > broken links).
  */
 export function BookButton({
   roomSlug,
@@ -30,10 +40,12 @@ export function BookButton({
     return null;
   }
 
-  const href = roomSlug
+  const preferred = roomSlug
     ? BookingService.getRoomUrl(roomSlug)
     : BookingService.getUrl();
-  const external = BookingService.isExternal();
+  const useContactFallback = isPlaceholderBookingUrl(preferred);
+  const href = useContactFallback ? "/contact" : preferred;
+  const external = useContactFallback ? false : BookingService.isExternal();
 
   return (
     <a
@@ -41,8 +53,12 @@ export function BookButton({
       className={className}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       onClick={(e) => {
-        e.preventDefault();
         onNavigate?.();
+        if (useContactFallback) {
+          // Let the browser follow /contact — no external open.
+          return;
+        }
+        e.preventDefault();
         if (roomSlug) {
           BookingService.openRoom(roomSlug, { source });
         } else {

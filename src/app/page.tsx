@@ -9,10 +9,13 @@ import { InstagramStrip } from "@/components/InstagramStrip";
 import { BookCta } from "@/components/BookCta";
 import { IntroSplash } from "@/components/IntroSplash";
 import { Reveal } from "@/components/Reveal";
+import { JsonLd } from "@/components/JsonLd";
+import { faqJsonLd } from "@/lib/seo";
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={faqJsonLd()} />
       <IntroSplash />
       <Header />
       <main className="relative z-[1]">

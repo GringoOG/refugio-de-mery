@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { cookies } from "next/headers";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { BackgroundVideo } from "@/components/BackgroundVideo";
+import { JsonLd } from "@/components/JsonLd";
 import { LocaleProvider } from "@/lib/i18n";
 import {
   defaultLocale,
@@ -9,6 +10,12 @@ import {
   LOCALE_COOKIE,
   type Locale,
 } from "@/lib/i18n/config";
+import {
+  buildPageMetadata,
+  lodgingJsonLd,
+  seoBrand,
+  siteUrl,
+} from "@/lib/seo";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -30,10 +37,28 @@ const body = Manrope({
   weight: ["400", "500", "600"],
 });
 
+const homeMeta = buildPageMetadata("home");
+
 export const metadata: Metadata = {
-  title: "Refugio de Mery Lucmabamba | Coffee Farm Stay near Machu Picchu",
-  description:
-    "Family coffee farm lodging on the Salkantay Trek in Lucmabamba. Private rooms, half board, and Tour de Café.",
+  ...homeMeta,
+  metadataBase: new URL(siteUrl),
+  title: {
+    default:
+      typeof homeMeta.title === "object" &&
+      homeMeta.title &&
+      "absolute" in homeMeta.title &&
+      homeMeta.title.absolute
+        ? homeMeta.title.absolute
+        : `${seoBrand} | Coffee Farm Stay on the Salkantay Trek`,
+    template: `%s | ${seoBrand}`,
+  },
+  applicationName: seoBrand,
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 };
 
 async function readInitialLocale(): Promise<Locale> {
@@ -69,6 +94,7 @@ export default async function RootLayout({
         />
       </head>
       <body className="min-h-full antialiased">
+        <JsonLd data={lodgingJsonLd()} />
         <LocaleProvider initialLocale={locale}>
           <BackgroundVideo />
           {children}
