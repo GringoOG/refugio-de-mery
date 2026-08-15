@@ -24,7 +24,7 @@ export function AmenitiesPanel() {
           </div>
           <div className="relative min-h-[240px] overflow-hidden rounded-[4px] sm:min-h-[320px] md:min-h-[420px]">
             <Image
-              src="/photos/foto3.jpg"
+              src="/photos/amenities-terrace.jpg"
               alt={t.amenities.title}
               fill
               className="object-cover"

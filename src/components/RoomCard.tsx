@@ -9,11 +9,9 @@ export type RoomOffer = {
   name: string;
   blurb: string;
   bedLabel: string;
-  /** e.g. "150 PEN / 44 USD" */
+  /** e.g. "70 PEN / 20 USD" — always per person */
   priceLabel: string;
-  /** Optional single-occupancy price shown under the main rate */
-  singlePriceLabel?: string;
-  /** Shown next to main rate when singlePriceLabel is set, e.g. "2 persons" / "3 persons" */
+  /** Capacity / full-room total, e.g. "Up to 2 guests · 140 PEN / 40 USD" */
   pricePersonsLabel?: string;
   image: string;
 };
@@ -85,18 +83,12 @@ export function RoomCard({
               <p className="text-[1.02rem] font-semibold tracking-tight text-[var(--ink)] sm:text-xl">
                 {room.priceLabel}{" "}
                 <span className="text-sm font-normal text-[var(--ink-muted)]">
-                  / {t.common.night}
-                  {room.singlePriceLabel
-                    ? ` · ${room.pricePersonsLabel ?? `2 ${t.common.persons}`}`
-                    : ""}
+                  / {t.common.person} / {t.common.night}
                 </span>
               </p>
-              {room.singlePriceLabel ? (
-                <p className="text-[1.02rem] font-semibold tracking-tight text-[var(--ink)] sm:text-xl">
-                  {room.singlePriceLabel}{" "}
-                  <span className="text-sm font-normal text-[var(--ink-muted)]">
-                    / {t.common.night} · 1 {t.common.person}
-                  </span>
+              {room.pricePersonsLabel ? (
+                <p className="text-[0.9rem] text-[var(--ink-muted)]">
+                  {room.pricePersonsLabel}
                 </p>
               ) : null}
             </div>

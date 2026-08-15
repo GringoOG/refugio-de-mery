@@ -7,6 +7,8 @@ export type SplitItem = {
   title: string;
   blurb: string;
   image: string;
+  /** Extra photos in the media panel (first in array is secondary; `image` stays primary). */
+  images?: string[];
   eyebrow?: string;
   features?: string[];
   badges?: string[];
@@ -107,29 +109,65 @@ export function SplitCard({
           ) : null}
         </div>
 
-        <div className="relative order-1 aspect-[4/3] w-full overflow-hidden bg-[var(--bg-soft)] sm:aspect-[4/5] lg:order-none lg:aspect-auto lg:min-h-[460px]">
+        <div className="relative order-1 w-full overflow-hidden bg-[var(--bg-soft)] lg:order-none lg:min-h-[460px]">
           {item.mapSrc ? (
-            <iframe
-              title={`Map — ${item.title}`}
-              src={item.mapSrc}
-              className="absolute inset-0 h-full w-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
+            <div className="relative aspect-[4/3] w-full sm:aspect-[4/5] lg:absolute lg:inset-0 lg:aspect-auto">
+              <iframe
+                title={`Map — ${item.title}`}
+                src={item.mapSrc}
+                className="absolute inset-0 h-full w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+          ) : item.images && item.images.length > 0 ? (
+            <div className="grid h-full grid-rows-[1.35fr_1fr] gap-1.5 p-1.5 sm:gap-2 sm:p-2 lg:absolute lg:inset-0">
+              <div className="relative min-h-[200px] overflow-hidden sm:min-h-[240px] lg:min-h-0">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className={
+                    item.imageFit === "contain"
+                      ? "object-contain p-3"
+                      : "object-cover"
+                  }
+                  sizes="(max-width: 1023px) 100vw, 50vw"
+                  quality={85}
+                  priority={false}
+                />
+              </div>
+              <div className="relative min-h-[150px] overflow-hidden sm:min-h-[180px] lg:min-h-0">
+                <Image
+                  src={item.images[0]}
+                  alt={`${item.title} — detail`}
+                  fill
+                  className={
+                    item.imageFit === "contain"
+                      ? "object-contain p-3"
+                      : "object-cover"
+                  }
+                  sizes="(max-width: 1023px) 100vw, 50vw"
+                  quality={85}
+                />
+              </div>
+            </div>
           ) : (
-            <Image
-              src={item.image}
-              alt={item.title}
-              fill
-              className={
-                item.imageFit === "contain"
-                  ? "object-contain p-4 sm:p-6"
-                  : "object-cover"
-              }
-              sizes="(max-width: 1023px) 100vw, 50vw"
-              quality={75}
-            />
+            <div className="relative aspect-[4/3] w-full sm:aspect-[4/5] lg:absolute lg:inset-0 lg:aspect-auto">
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                className={
+                  item.imageFit === "contain"
+                    ? "object-contain p-4 sm:p-6"
+                    : "object-cover"
+                }
+                sizes="(max-width: 1023px) 100vw, 50vw"
+                quality={75}
+              />
+            </div>
           )}
         </div>
       </div>

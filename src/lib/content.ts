@@ -164,7 +164,7 @@ export const faqs = [
   },
   {
     q: "What does a room cost?",
-    a: "Double rooms are 150 PEN / 44 USD per night for two guests. Twin rooms are also available from 88 PEN / 26 USD for one guest. The triple room is 275 PEN / 81 USD (or 81 PEN / 24 USD for one guest). No prepayment required.",
+    a: "The rate is always 70 PEN / 20 USD per person per night — for every room type. Breakfast and dinner, private bathroom, hot shower, and Wi‑Fi are included. No prepayment required.",
   },
   {
     q: "Do you offer a coffee tour?",

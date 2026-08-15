@@ -59,7 +59,7 @@ export const es: Dictionary = {
         id: "rooms",
         label: "HABITACIONES",
         title: "Donde el descanso encuentra la calma",
-        body: "Habitaciones dobles con baño privado, terraza y vistas a la montaña — pensadas para descansar después del Salkantay.",
+        body: "Cinco habitaciones con baño privado, ducha caliente y Wi‑Fi — siempre 70 PEN por persona, con desayuno y cena incluidos.",
         cta: "Explorar habitaciones",
       },
       {
@@ -130,7 +130,7 @@ export const es: Dictionary = {
       },
       {
         q: "¿Cuánto cuesta una habitación?",
-        a: "Las habitaciones dobles cuestan 150 PEN / 44 USD por noche para dos huéspedes. Las twin también están disponibles desde 88 PEN / 26 USD para una persona. La triple cuesta 275 PEN / 81 USD (o 81 PEN / 24 USD para una persona). No se requiere prepago.",
+        a: "El precio es siempre 70 PEN / 20 USD por persona por noche — en todos los tipos de habitación. Incluye desayuno y cena, baño privado, ducha caliente y Wi‑Fi. No se requiere prepago.",
       },
       {
         q: "¿Ofrecen un tour de café?",
@@ -157,48 +157,59 @@ export const es: Dictionary = {
   rooms: {
     pageTitle: "Habitaciones",
     pageBody:
-      "Tres opciones tranquilas en la finca de café — elige la configuración de camas que mejor se adapte a tu trek y descanso.",
+      "Cinco habitaciones en la finca — una matrimonial, una doble, dos triples y una simple. Siempre 70 PEN por persona, con desayuno y cena incluidos.",
     pageCta: "Explorar habitaciones",
     amenities: [
-      "Balcón / terraza",
       "Baño privado",
+      "Ducha caliente",
+      "Wi‑Fi gratis",
+      "Desayuno y cena incluidos",
       "Artículos de aseo",
       "Toallas",
-      "Bebida de bienvenida — limonada casera fría",
     ],
     badges: [
-      "Sin tarjeta de crédito para reservar",
+      "70 PEN / 20 USD por persona",
       "Desayuno y cena incluidos",
-      "Cancelación gratuita",
+      "Baño privado",
+      "Ducha caliente",
+      "Wi‑Fi gratis",
       "Pago en el alojamiento",
-      "Pago con tarjeta — sin cargos extra",
-      "Balcón / terraza",
-      "Vista a la montaña",
+      "Sin tarjeta de crédito para reservar",
     ],
     breakfastDinnerBadge: "Desayuno y cena incluidos",
     offers: [
       {
         slug: "double-bed",
-        name: "Habitación doble con cama king-size",
+        name: "Habitación matrimonial",
         blurb:
-          "Una doble tranquila con una cama king-size — baño privado, vistas desde la terraza, y desayuno y cena incluidos.",
-        bedLabel: "Cama king-size",
+          "Una habitación con cama matrimonial — baño privado, ducha caliente, Wi‑Fi, y desayuno y cena incluidos.",
+        bedLabel: "Cama matrimonial",
+        pricePersonsLabel: "Hasta 2 personas · 140 PEN / 40 USD para dos",
       },
       {
         slug: "twin-beds",
-        name: "Habitación doble con camas twin",
+        name: "Habitación doble",
         blurb:
-          "Comodidad para dos con camas individuales separadas — baño privado, terraza, y desayuno y cena incluidos.",
-        bedLabel: "Camas twin",
-        pricePersonsLabel: "2 personas",
+          "Una habitación con dos camas individuales — baño privado, ducha caliente, Wi‑Fi, y desayuno y cena incluidos.",
+        bedLabel: "Dos camas individuales",
+        pricePersonsLabel: "Hasta 2 personas · 140 PEN / 40 USD para dos",
       },
       {
         slug: "triple-room",
-        name: "Habitación triple con tres camas individuales",
+        name: "Habitación triple",
         blurb:
-          "Tres camas individuales para amigos o un pequeño grupo de trekking — baño privado, terraza, y desayuno y cena incluidos.",
+          "Dos habitaciones triples en la finca — tres camas individuales cada una. Baño privado, ducha caliente, Wi‑Fi, y desayuno y cena incluidos.",
         bedLabel: "Tres camas individuales",
-        pricePersonsLabel: "3 personas",
+        pricePersonsLabel:
+          "Hasta 3 personas · 210 PEN / 60 USD para tres · 2 habitaciones",
+      },
+      {
+        slug: "single-room",
+        name: "Habitación simple",
+        blurb:
+          "Una habitación individual privada — baño, ducha caliente, Wi‑Fi, y desayuno y cena incluidos.",
+        bedLabel: "Cama individual",
+        pricePersonsLabel: "1 persona · 70 PEN / 20 USD",
       },
     ],
   },
@@ -230,6 +241,9 @@ export const es: Dictionary = {
     pageBody:
       "Cocina de carne y vegetariana, un generoso desayuno de finca, guacamole casero y un postre dulce.",
     pageCta: "Explorar la mesa",
+    atmosphereTitle: "Cena en la mesa familiar",
+    atmosphereBody:
+      "La media pensión son noches compartidas — comida casera, aire de montaña y la mesa larga donde se encuentran huéspedes y familia.",
     items: [
       {
         id: "kitchen",
@@ -273,9 +287,9 @@ export const es: Dictionary = {
       {
         id: "dessert",
         eyebrow: "Dulce final",
-        title: "Postre casero",
+        title: "Postres",
         blurb:
-          "Un postre cálido de finca para cerrar la comida — salsa rica, fruta caramelizada y un toque crujiente de chocolate.",
+          "Postres de la finca para cerrar la comida — crema suave, fruta caramelizada y un toque crujiente de chocolate.",
         features: [
           "Hecho en la finca",
           "Servido con las comidas de media pensión",

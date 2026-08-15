@@ -7,18 +7,18 @@ import { useLocale } from "@/lib/i18n";
 const media = [
   {
     image: "/photos/testimonial-1.jpg",
-    width: 1800,
-    height: 1350,
+    width: 1024,
+    height: 768,
   },
   {
     image: "/photos/testimonial-2.jpg",
-    width: 1800,
-    height: 1350,
+    width: 1024,
+    height: 768,
   },
   {
     image: "/photos/testimonial-3.jpg",
-    width: 1410,
-    height: 1800,
+    width: 1024,
+    height: 768,
   },
 ];
 

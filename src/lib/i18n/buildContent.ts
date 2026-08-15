@@ -3,23 +3,28 @@ import type { RoomOffer } from "@/components/RoomCard";
 import type { Dictionary } from "@/lib/i18n/types";
 import { farmMapEmbedSrc } from "@/lib/content";
 
+/** Client rate: always 70 PEN per person (≈ 20 USD). */
+export const PRICE_PER_PERSON = "70 PEN / 20 USD";
+
 const roomMedia: Record<
   RoomOffer["slug"],
-  { priceLabel: string; singlePriceLabel?: string; image: string }
+  { priceLabel: string; image: string }
 > = {
   "double-bed": {
-    priceLabel: "150 PEN / 44 USD",
+    priceLabel: PRICE_PER_PERSON,
     image: "/photos/room-king-size.jpg",
   },
   "twin-beds": {
-    priceLabel: "150 PEN / 44 USD",
-    singlePriceLabel: "88 PEN / 26 USD",
+    priceLabel: PRICE_PER_PERSON,
     image: "/photos/room-twin-beds.jpg",
   },
   "triple-room": {
-    priceLabel: "275 PEN / 81 USD",
-    singlePriceLabel: "81 PEN / 24 USD",
-    image: "/photos/room-king-size.jpg",
+    priceLabel: PRICE_PER_PERSON,
+    image: "/photos/room-triple.jpg",
+  },
+  "single-room": {
+    priceLabel: PRICE_PER_PERSON,
+    image: "/photos/room-twin-beds.jpg",
   },
 };
 
@@ -27,6 +32,7 @@ const splitMedia: Record<
   string,
   {
     image: string;
+    images?: string[];
     imageFit?: "cover" | "contain";
     priceLabel?: string;
     mapSrc?: boolean;
@@ -36,10 +42,13 @@ const splitMedia: Record<
     image: "/photos/tour/tour-de-cafe-card.jpg",
     priceLabel: "15 PEN / 5 USD",
   },
-  kitchen: { image: "/photos/food/foto11.jpg" },
+  kitchen: { image: "/photos/food/kitchen.jpg" },
   breakfast: { image: "/photos/food/breakfast.jpg" },
   guacamole: { image: "/photos/food/guacamole.jpg" },
-  dessert: { image: "/photos/food/dessert.jpg" },
+  dessert: {
+    image: "/photos/food/dessert-main.jpg",
+    images: ["/photos/food/dessert-detail.jpg"],
+  },
   coffee: {
     image: "/photos/products/coffee-bag.jpg",
     imageFit: "contain",
@@ -63,13 +72,13 @@ function mergeSplit(
       blurb: copy.blurb,
       features: copy.features,
       image: media.image,
+      images: media.images,
       imageFit: media.imageFit,
       priceLabel: media.priceLabel,
       priceSuffix: copy.priceSuffix,
     };
     if (copy.id === "landmarks") {
       item.mapSrc = farmMapEmbedSrc(15, localeHl);
-      // features filled by caller for landmarks
     }
     return item;
   });
@@ -84,7 +93,6 @@ export function buildRooms(t: Dictionary): RoomOffer[] {
       blurb: offer.blurb,
       bedLabel: offer.bedLabel,
       priceLabel: media.priceLabel,
-      singlePriceLabel: media.singlePriceLabel,
       pricePersonsLabel: offer.pricePersonsLabel,
       image: media.image,
     };

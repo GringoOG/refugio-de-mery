@@ -58,7 +58,7 @@ export const cs: Dictionary = {
         id: "rooms",
         label: "POKOJE",
         title: "Kde se odpočinek potkává s tichem farmy",
-        body: "Dvoulůžkové pokoje s vlastní koupelnou, terasou a výhledem na hory — připravené k odpočinku po dnech na Salkantay.",
+        body: "Pět pokojů s vlastní koupelnou, teplou sprchou a Wi‑Fi — vždy 70 PEN za osobu, snídaně a večeře v ceně.",
         cta: "Prozkoumat naše pokoje",
       },
       {
@@ -129,7 +129,7 @@ export const cs: Dictionary = {
       },
       {
         q: "Kolik stojí pokoj?",
-        a: "Dvoulůžkové pokoje stojí 150 PEN / 44 USD za noc pro dva hosty. Twin pokoje jsou také k dispozici od 88 PEN / 26 USD pro jednu osobu. Třílůžkový pokoj stojí 275 PEN / 81 USD (nebo 81 PEN / 24 USD pro jednu osobu). Žádná záloha není potřeba.",
+        a: "Cena je vždy 70 PEN / 20 USD za osobu a noc — u všech typů pokojů. V ceně je snídaně a večeře, vlastní koupelna, teplá sprcha a Wi‑Fi. Žádná záloha není potřeba.",
       },
       {
         q: "Nabízíte prohlídku kávy?",
@@ -155,48 +155,59 @@ export const cs: Dictionary = {
   rooms: {
     pageTitle: "Pokoje",
     pageBody:
-      "Tři klidné varianty pokojů na kávové farmě — vyberte si uspořádání lůžek, které sedí vašemu treku i odpočinku.",
+      "Pět pokojů na farmě — jeden manželský, jeden dvoulůžkový, dva třílůžkové a jeden jednolůžkový. Vždy 70 PEN za osobu, snídaně a večeře v ceně.",
     pageCta: "Prozkoumat naše pokoje",
     amenities: [
-      "Balkon / terasa",
       "Vlastní koupelna",
+      "Teplá sprcha",
+      "Wi‑Fi zdarma",
+      "Snídaně a večeře v ceně",
       "Toaletní potřeby",
       "Ručníky",
-      "Uvítací drink — chlazená domácí limonáda",
     ],
     badges: [
-      "Na rezervaci není potřeba karta",
+      "70 PEN / 20 USD za osobu",
       "Snídaně a večeře v ceně",
-      "Bezplatné zrušení",
+      "Vlastní koupelna",
+      "Teplá sprcha",
+      "Wi‑Fi zdarma",
       "Platba na místě",
-      "Platba kartou — bez příplatků",
-      "Balkon / terasa",
-      "Výhled na hory",
+      "Na rezervaci není potřeba karta",
     ],
     breakfastDinnerBadge: "Snídaně a večeře v ceně",
     offers: [
       {
         slug: "double-bed",
-        name: "Dvoulůžkový pokoj s manželskou postelí",
+        name: "Manželský pokoj",
         blurb:
-          "Klidný dvoulůžkový pokoj s jednou manželskou postelí — vlastní koupelna, výhled z terasy a snídaně s večeří v ceně.",
+          "Jeden pokoj s manželskou postelí — vlastní koupelna, teplá sprcha, Wi‑Fi a snídaně s večeří v ceně.",
         bedLabel: "Manželská postel",
+        pricePersonsLabel: "Až 2 osoby · 140 PEN / 40 USD pro dva",
       },
       {
         slug: "twin-beds",
-        name: "Dvoulůžkový pokoj s oddělenými postelemi",
+        name: "Dvoulůžkový pokoj",
         blurb:
-          "Komfort pro dva s oddělenými jednolůžky — vlastní koupelna, terasa a snídaně s večeří v ceně.",
-        bedLabel: "Oddělená lůžka",
-        pricePersonsLabel: "2 osoby",
+          "Jeden pokoj se dvěma jednolůžky — vlastní koupelna, teplá sprcha, Wi‑Fi a snídaně s večeří v ceně.",
+        bedLabel: "Dvě jednolůžka",
+        pricePersonsLabel: "Až 2 osoby · 140 PEN / 40 USD pro dva",
       },
       {
         slug: "triple-room",
-        name: "Třílůžkový pokoj se třemi jednolůžky",
+        name: "Třílůžkový pokoj",
         blurb:
-          "Tři jednolůžka pro přátele nebo malou trekingovou skupinu — vlastní koupelna, terasa a snídaně s večeří v ceně.",
+          "Dva třílůžkové pokoje na farmě — každý se třemi jednolůžky. Vlastní koupelna, teplá sprcha, Wi‑Fi a snídaně s večeří v ceně.",
         bedLabel: "Tři jednolůžka",
-        pricePersonsLabel: "3 osoby",
+        pricePersonsLabel:
+          "Až 3 osoby · 210 PEN / 60 USD pro tři · 2 pokoje",
+      },
+      {
+        slug: "single-room",
+        name: "Jednolůžkový pokoj",
+        blurb:
+          "Jeden soukromý jednolůžkový pokoj — koupelna, teplá sprcha, Wi‑Fi a snídaně s večeří v ceně.",
+        bedLabel: "Jednolůžko",
+        pricePersonsLabel: "1 osoba · 70 PEN / 20 USD",
       },
     ],
   },
@@ -228,6 +239,9 @@ export const cs: Dictionary = {
     pageBody:
       "Masitá i vegetariánská kuchyně, vydatná farmářská snídaně, domácí guacamole a sladký dezert.",
     pageCta: "Prozkoumat náš stůl",
+    atmosphereTitle: "Večeře u rodinného stolu",
+    atmosphereBody:
+      "Polopenze znamená společné večery — domácí jídlo, horský vzduch a dlouhý stůl, kde se potkávají hosté s rodinou.",
     items: [
       {
         id: "kitchen",

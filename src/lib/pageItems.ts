@@ -83,6 +83,69 @@ export const tourPhotos: {
   height: number;
 }[] = [
   {
+    id: "washed-beans-hands",
+    src: "/photos/tour/washed-beans-hands.jpg",
+    alt: "Washed parchment coffee beans held in cupped hands",
+    width: 1024,
+    height: 711,
+  },
+  {
+    id: "cherries-branch",
+    src: "/photos/tour/cherries-branch.jpg",
+    alt: "Guide showing green coffee cherries on the plant",
+    width: 1024,
+    height: 682,
+  },
+  {
+    id: "harvesting",
+    src: "/photos/tour/harvesting.jpg",
+    alt: "Picking coffee cherries among the farm plants",
+    width: 682,
+    height: 1024,
+  },
+  {
+    id: "clay-pot-beans",
+    src: "/photos/tour/clay-pot-beans.jpg",
+    alt: "Opening a clay pot of parchment coffee beans",
+    width: 682,
+    height: 1024,
+  },
+  {
+    id: "sorting-basket",
+    src: "/photos/tour/sorting-basket.jpg",
+    alt: "Sorting parchment coffee beans in a woven basket",
+    width: 1024,
+    height: 682,
+  },
+  {
+    id: "hand-grinder",
+    src: "/photos/tour/hand-grinder.jpg",
+    alt: "Grinding coffee on a traditional wooden hand mill",
+    width: 682,
+    height: 1024,
+  },
+  {
+    id: "serving-coffee",
+    src: "/photos/tour/serving-coffee.jpg",
+    alt: "Pouring fresh farm coffee at the lodge table",
+    width: 682,
+    height: 1024,
+  },
+  {
+    id: "host-coffee-cup",
+    src: "/photos/tour/host-coffee-cup.jpg",
+    alt: "Host with a cup of coffee on the mountain terrace",
+    width: 1024,
+    height: 684,
+  },
+  {
+    id: "host-balcony",
+    src: "/photos/tour/host-balcony.jpg",
+    alt: "Host on the lodge balcony overlooking the coffee forest",
+    width: 1024,
+    height: 682,
+  },
+  {
     id: "foto15",
     src: "/photos/tour/foto15.jpg",
     alt: "Pouring ripe coffee cherries into the farm pulping machine",
@@ -124,7 +187,7 @@ export const foodItems: SplitItem[] = [
     title: "Meat & vegetarian kitchen",
     blurb:
       "We cook for every guest — meat dishes and vegetarian plates, homemade and generous, served with mountain air.",
-    image: "/photos/food/foto11.jpg",
+    image: "/photos/food/kitchen.jpg",
     features: [
       "Meat and vegetarian options",
       "Trout, chicken or beef",
@@ -166,7 +229,8 @@ export const foodItems: SplitItem[] = [
     title: "Homemade dessert",
     blurb:
       "A warm farm dessert to finish the meal — rich sauce, caramelised fruit, and a crisp chocolate touch.",
-    image: "/photos/food/dessert.jpg",
+    image: "/photos/food/dessert-main.jpg",
+    images: ["/photos/food/dessert-detail.jpg"],
     features: ["Homemade on the farm", "Served with half-board meals"],
   },
 ];

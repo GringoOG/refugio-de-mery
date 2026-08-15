@@ -58,7 +58,7 @@ export const de: Dictionary = {
         id: "rooms",
         label: "ZIMMER",
         title: "Wo Ruhe auf Farmstille trifft",
-        body: "Doppelzimmer mit eigenem Bad, Terrasse und Bergblick — geschaffen für Erholung nach den Salkantay-Tagen.",
+        body: "Fünf Zimmer mit eigenem Bad, heißer Dusche und WLAN — immer 70 PEN pro Person, Frühstück und Abendessen inklusive.",
         cta: "Unsere Zimmer entdecken",
       },
       {
@@ -129,7 +129,7 @@ export const de: Dictionary = {
       },
       {
         q: "Was kostet ein Zimmer?",
-        a: "Doppelzimmer kosten 150 PEN / 44 USD pro Nacht für zwei Gäste. Twin-Zimmer sind auch ab 88 PEN / 26 USD für eine Person verfügbar. Das Dreibettzimmer kostet 275 PEN / 81 USD (oder 81 PEN / 24 USD für eine Person). Keine Vorauszahlung erforderlich.",
+        a: "Der Preis beträgt immer 70 PEN / 20 USD pro Person und Nacht — für alle Zimmertypen. Frühstück und Abendessen, eigenes Bad, heiße Dusche und WLAN sind inklusive. Keine Vorauszahlung erforderlich.",
       },
       {
         q: "Bieten Sie eine Kaffeetour an?",
@@ -155,48 +155,59 @@ export const de: Dictionary = {
   rooms: {
     pageTitle: "Zimmer",
     pageBody:
-      "Drei ruhige Zimmeroptionen auf der Kaffeefarm — wählen Sie die Bettkonfiguration, die zu Ihrem Trek und Ihrer Erholung passt.",
+      "Fünf Zimmer auf der Farm — ein matrimoniales, ein Doppelzimmer, zwei Dreibettzimmer und ein Einzelzimmer. Immer 70 PEN pro Person, Frühstück und Abendessen inklusive.",
     pageCta: "Unsere Zimmer entdecken",
     amenities: [
-      "Balkon / Terrasse",
       "Eigenes Bad",
+      "Heiße Dusche",
+      "Kostenloses WLAN",
+      "Frühstück & Abendessen inklusive",
       "Toilettenartikel",
       "Handtücher",
-      "Willkommensgetränk — gekühlte hausgemachte Limonade",
     ],
     badges: [
-      "Keine Kreditkarte zur Reservierung nötig",
+      "70 PEN / 20 USD pro Person",
       "Frühstück & Abendessen inklusive",
-      "Kostenlose Stornierung",
+      "Eigenes Bad",
+      "Heiße Dusche",
+      "Kostenloses WLAN",
       "Zahlung vor Ort",
-      "Kartenzahlung — ohne Extra-Gebühren",
-      "Balkon / Terrasse",
-      "Bergblick",
+      "Keine Kreditkarte zur Reservierung nötig",
     ],
     breakfastDinnerBadge: "Frühstück & Abendessen inklusive",
     offers: [
       {
         slug: "double-bed",
-        name: "Doppelzimmer mit King-Size-Bett",
+        name: "Matrimonialzimmer",
         blurb:
-          "Ein ruhiges Doppelzimmer mit einem King-Size-Bett — eigenes Bad, Terrassenblick sowie Frühstück & Abendessen inklusive.",
-        bedLabel: "King-Size-Bett",
+          "Ein Zimmer mit Doppelbett — eigenes Bad, heiße Dusche, WLAN sowie Frühstück & Abendessen inklusive.",
+        bedLabel: "Doppelbett",
+        pricePersonsLabel: "Bis 2 Gäste · 140 PEN / 40 USD für zwei",
       },
       {
         slug: "twin-beds",
-        name: "Doppelzimmer mit Twin-Betten",
+        name: "Doppelzimmer",
         blurb:
-          "Komfort für zwei mit getrennten Einzelbetten — eigenes Bad, Terrasse sowie Frühstück & Abendessen inklusive.",
-        bedLabel: "Twin-Betten",
-        pricePersonsLabel: "2 Personen",
+          "Ein Zimmer mit zwei Einzelbetten — eigenes Bad, heiße Dusche, WLAN sowie Frühstück & Abendessen inklusive.",
+        bedLabel: "Zwei Einzelbetten",
+        pricePersonsLabel: "Bis 2 Gäste · 140 PEN / 40 USD für zwei",
       },
       {
         slug: "triple-room",
-        name: "Dreibettzimmer mit drei Einzelbetten",
+        name: "Dreibettzimmer",
         blurb:
-          "Drei Einzelbetten für Freunde oder eine kleine Wandergruppe — eigenes Bad, Terrasse sowie Frühstück & Abendessen inklusive.",
+          "Zwei Dreibettzimmer auf der Farm — je drei Einzelbetten. Eigenes Bad, heiße Dusche, WLAN sowie Frühstück & Abendessen inklusive.",
         bedLabel: "Drei Einzelbetten",
-        pricePersonsLabel: "3 Personen",
+        pricePersonsLabel:
+          "Bis 3 Gäste · 210 PEN / 60 USD für drei · 2 Zimmer",
+      },
+      {
+        slug: "single-room",
+        name: "Einzelzimmer",
+        blurb:
+          "Ein privates Einzelzimmer — Bad, heiße Dusche, WLAN sowie Frühstück & Abendessen inklusive.",
+        bedLabel: "Einzelbett",
+        pricePersonsLabel: "1 Gast · 70 PEN / 20 USD",
       },
     ],
   },
@@ -228,6 +239,9 @@ export const de: Dictionary = {
     pageBody:
       "Fleisch- und vegetarische Küche, ein großzügiges Farmfrühstück, hausgemachte Guacamole und ein süßes Dessert.",
     pageCta: "Unsere Tafel entdecken",
+    atmosphereTitle: "Abendessen am Familientisch",
+    atmosphereBody:
+      "Halbpension heißt gemeinsame Abende — hausgemachtes Essen, Bergluft und der lange Tisch, an dem Gäste und Familie zusammentreffen.",
     items: [
       {
         id: "kitchen",

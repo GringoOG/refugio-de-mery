@@ -58,7 +58,7 @@ export const fr: Dictionary = {
         id: "rooms",
         label: "CHAMBRES",
         title: "Là où le repos rencontre le calme de la ferme",
-        body: "Chambres doubles avec salle de bain privée, terrasse et vue sur la montagne — pensées pour se reposer après les jours du Salkantay.",
+        body: "Cinq chambres avec salle de bain privée, douche chaude et Wi‑Fi — toujours 70 PEN par personne, petit-déjeuner et dîner inclus.",
         cta: "Découvrir nos chambres",
       },
       {
@@ -129,7 +129,7 @@ export const fr: Dictionary = {
       },
       {
         q: "Quel est le prix d’une chambre ?",
-        a: "Les chambres doubles sont à 150 PEN / 44 USD par nuit pour deux personnes. Les chambres twin sont aussi disponibles à partir de 88 PEN / 26 USD pour une personne. La chambre triple est à 275 PEN / 81 USD (ou 81 PEN / 24 USD pour une personne). Aucun prépaiement requis.",
+        a: "Le tarif est toujours de 70 PEN / 20 USD par personne et par nuit — pour tous les types de chambres. Petit-déjeuner et dîner, salle de bain privée, douche chaude et Wi‑Fi inclus. Aucun prépaiement requis.",
       },
       {
         q: "Proposez-vous une visite du café ?",
@@ -155,48 +155,59 @@ export const fr: Dictionary = {
   rooms: {
     pageTitle: "Chambres",
     pageBody:
-      "Trois options de chambres calmes à la ferme caféière — choisissez la configuration de lit qui convient à votre trek et à votre repos.",
+      "Cinq chambres à la ferme — une matrimoniale, une double, deux triples et une simple. Toujours 70 PEN par personne, petit-déjeuner et dîner inclus.",
     pageCta: "Découvrir nos chambres",
     amenities: [
-      "Balcon / terrasse",
       "Salle de bain privée",
+      "Douche chaude",
+      "Wi‑Fi gratuit",
+      "Petit-déjeuner et dîner inclus",
       "Articles de toilette",
       "Serviettes",
-      "Boisson de bienvenue — limonade maison fraîche",
     ],
     badges: [
-      "Pas de carte bancaire pour réserver",
+      "70 PEN / 20 USD par personne",
       "Petit-déjeuner et dîner inclus",
-      "Annulation gratuite",
+      "Salle de bain privée",
+      "Douche chaude",
+      "Wi‑Fi gratuit",
       "Paiement sur place",
-      "Paiement par carte — sans frais supplémentaires",
-      "Balcon / terrasse",
-      "Vue montagne",
+      "Pas de carte bancaire pour réserver",
     ],
     breakfastDinnerBadge: "Petit-déjeuner et dîner inclus",
     offers: [
       {
         slug: "double-bed",
-        name: "Chambre double avec lit king-size",
+        name: "Chambre matrimoniale",
         blurb:
-          "Une double calme avec un lit king-size — salle de bain privée, vue depuis la terrasse, petit-déjeuner et dîner inclus.",
-        bedLabel: "Lit king-size",
+          "Une chambre avec lit matrimonial — salle de bain privée, douche chaude, Wi‑Fi, petit-déjeuner et dîner inclus.",
+        bedLabel: "Lit matrimonial",
+        pricePersonsLabel: "Jusqu’à 2 personnes · 140 PEN / 40 USD pour deux",
       },
       {
         slug: "twin-beds",
-        name: "Chambre double avec lits jumeaux",
+        name: "Chambre double",
         blurb:
-          "Confort pour deux avec lits simples séparés — salle de bain privée, terrasse, petit-déjeuner et dîner inclus.",
-        bedLabel: "Lits jumeaux",
-        pricePersonsLabel: "2 personnes",
+          "Une chambre avec deux lits simples — salle de bain privée, douche chaude, Wi‑Fi, petit-déjeuner et dîner inclus.",
+        bedLabel: "Deux lits simples",
+        pricePersonsLabel: "Jusqu’à 2 personnes · 140 PEN / 40 USD pour deux",
       },
       {
         slug: "triple-room",
-        name: "Chambre triple avec trois lits simples",
+        name: "Chambre triple",
         blurb:
-          "Trois lits simples pour amis ou petit groupe de randonnée — salle de bain privée, terrasse, petit-déjeuner et dîner inclus.",
+          "Deux chambres triples à la ferme — trois lits simples chacune. Salle de bain privée, douche chaude, Wi‑Fi, petit-déjeuner et dîner inclus.",
         bedLabel: "Trois lits simples",
-        pricePersonsLabel: "3 personnes",
+        pricePersonsLabel:
+          "Jusqu’à 3 personnes · 210 PEN / 60 USD pour trois · 2 chambres",
+      },
+      {
+        slug: "single-room",
+        name: "Chambre simple",
+        blurb:
+          "Une chambre individuelle privée — salle de bain, douche chaude, Wi‑Fi, petit-déjeuner et dîner inclus.",
+        bedLabel: "Lit simple",
+        pricePersonsLabel: "1 personne · 70 PEN / 20 USD",
       },
     ],
   },
@@ -228,6 +239,9 @@ export const fr: Dictionary = {
     pageBody:
       "Cuisine viande et végétarienne, un petit-déjeuner généreux à la ferme, guacamole maison et un dessert sucré.",
     pageCta: "Découvrir notre table",
+    atmosphereTitle: "Dîner à la table familiale",
+    atmosphereBody:
+      "La demi-pension, ce sont des soirées partagées — cuisine maison, air de montagne et la longue table où hôtes et famille se rencontrent.",
     items: [
       {
         id: "kitchen",

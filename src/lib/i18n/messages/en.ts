@@ -58,7 +58,7 @@ export const en: Dictionary = {
         id: "rooms",
         label: "ROOMS",
         title: "Where rest meets farm quiet",
-        body: "Double rooms with private bathroom, terrace, and mountain views — built for rest after the Salkantay days.",
+        body: "Five rooms with private bathroom, hot shower, and Wi‑Fi — always 70 PEN per person, breakfast and dinner included.",
         cta: "Explore our rooms",
       },
       {
@@ -129,7 +129,7 @@ export const en: Dictionary = {
       },
       {
         q: "What does a room cost?",
-        a: "Double rooms are 150 PEN / 44 USD per night for two guests. Twin rooms are also available from 88 PEN / 26 USD for one guest. The triple room is 275 PEN / 81 USD (or 81 PEN / 24 USD for one guest). No prepayment required.",
+        a: "The rate is always 70 PEN / 20 USD per person per night — for every room type. Breakfast and dinner, private bathroom, hot shower, and Wi‑Fi are included. No prepayment required.",
       },
       {
         q: "Do you offer a coffee tour?",
@@ -155,48 +155,58 @@ export const en: Dictionary = {
   rooms: {
     pageTitle: "Rooms",
     pageBody:
-      "Three calm room options on the coffee farm — choose the bed setup that fits your trek and rest.",
+      "Five rooms on the coffee farm — one matrimonial, one double (twin), two triples, and one single. Always 70 PEN per person, with breakfast and dinner included.",
     pageCta: "Explore our rooms",
     amenities: [
-      "Balcony / terrace",
       "Private bathroom",
+      "Hot shower",
+      "Free Wi‑Fi",
+      "Breakfast & dinner included",
       "Toiletries",
       "Towels",
-      "Welcome drink — chilled homemade lemonade",
     ],
     badges: [
-      "No credit card needed to reserve",
+      "70 PEN / 20 USD per person",
       "Breakfast & dinner included",
-      "Free cancellation",
+      "Private bathroom",
+      "Hot shower",
+      "Free Wi‑Fi",
       "Pay at the property",
-      "Card payment — no extra fees",
-      "Balcony / terrace",
-      "Mountain view",
+      "No credit card needed to reserve",
     ],
     breakfastDinnerBadge: "Breakfast & dinner included",
     offers: [
       {
         slug: "double-bed",
-        name: "Double room with king-size bed",
+        name: "Matrimonial room",
         blurb:
-          "A quiet double with one king-size bed — private bathroom, terrace views, and breakfast & dinner included.",
-        bedLabel: "King-size bed",
+          "One room with a matrimonial / king-size bed — private bathroom, hot shower, Wi‑Fi, and breakfast & dinner included.",
+        bedLabel: "Matrimonial bed",
+        pricePersonsLabel: "Up to 2 guests · 140 PEN / 40 USD for two",
       },
       {
         slug: "twin-beds",
         name: "Double room with twin beds",
         blurb:
-          "Comfort for two with separate single beds — private bathroom, terrace, and breakfast & dinner included.",
+          "One room with two single beds — private bathroom, hot shower, Wi‑Fi, and breakfast & dinner included.",
         bedLabel: "Twin beds",
-        pricePersonsLabel: "2 persons",
+        pricePersonsLabel: "Up to 2 guests · 140 PEN / 40 USD for two",
       },
       {
         slug: "triple-room",
-        name: "Triple room with three single beds",
+        name: "Triple room",
         blurb:
-          "Three single beds for friends or a small hiking group — private bathroom, terrace, and breakfast & dinner included.",
+          "Two triple rooms on the farm — three single beds each. Private bathroom, hot shower, Wi‑Fi, and breakfast & dinner included.",
         bedLabel: "Three single beds",
-        pricePersonsLabel: "3 persons",
+        pricePersonsLabel: "Up to 3 guests · 210 PEN / 60 USD for three · 2 rooms",
+      },
+      {
+        slug: "single-room",
+        name: "Single room",
+        blurb:
+          "One private single room — bathroom, hot shower, Wi‑Fi, and breakfast & dinner included.",
+        bedLabel: "Single bed",
+        pricePersonsLabel: "1 guest · 70 PEN / 20 USD",
       },
     ],
   },
@@ -228,6 +238,9 @@ export const en: Dictionary = {
     pageBody:
       "Meat and vegetarian kitchen, a generous farm breakfast, homemade guacamole, and a sweet dessert.",
     pageCta: "Explore our table",
+    atmosphereTitle: "Dinner at the family table",
+    atmosphereBody:
+      "Half board means shared evenings — homemade food, mountain air, and the long table where guests and the family meet.",
     items: [
       {
         id: "kitchen",

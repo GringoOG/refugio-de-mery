@@ -12,10 +12,11 @@ export type TestimonialCopy = {
   from: string;
 };
 export type RoomCopy = {
-  slug: "double-bed" | "twin-beds" | "triple-room";
+  slug: "double-bed" | "twin-beds" | "triple-room" | "single-room";
   name: string;
   blurb: string;
   bedLabel: string;
+  /** e.g. capacity / full-room total under the per-person rate */
   pricePersonsLabel?: string;
 };
 export type SplitCopy = {
@@ -115,6 +116,8 @@ export type Dictionary = {
     pageTitle: string;
     pageBody: string;
     pageCta: string;
+    atmosphereTitle: string;
+    atmosphereBody: string;
     items: SplitCopy[];
   };
   products: {

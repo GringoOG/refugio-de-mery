@@ -8,8 +8,11 @@ import { TransitionLink } from "@/components/TransitionLink";
 import { nav, site } from "@/lib/content";
 import { useLocale } from "@/lib/i18n";
 
-/** Desktop nav from xl — below that, hamburger (avoids logo clash with long locales). */
+/** Desktop nav from xl — below that, hamburger. */
 const DESKTOP_NAV_MQ = "(min-width: 1280px)";
+
+const navLeft = nav.slice(0, 3);
+const navRight = nav.slice(3);
 
 export function Header({ tone = "auto" }: { tone?: "auto" | "light" | "dark" }) {
   const [scrolled, setScrolled] = useState(false);
@@ -49,6 +52,10 @@ export function Header({ tone = "auto" }: { tone?: "auto" | "light" | "dark" }) 
   const light = tone === "light" || (tone === "auto" && (scrolled || menuOpen));
   const solid = tone === "light" || (tone === "auto" && (scrolled || menuOpen));
 
+  const linkClass = `whitespace-nowrap text-[0.86rem] tracking-[0.02em] transition-opacity hover:opacity-70 2xl:text-[0.94rem] ${
+    light ? "text-[var(--ink)]" : "text-white"
+  }`;
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top,0px)] transition-colors duration-300 ${
@@ -57,9 +64,9 @@ export function Header({ tone = "auto" }: { tone?: "auto" | "light" | "dark" }) 
           : "bg-[rgba(0,0,0,0.4)] text-white backdrop-blur-[1px]"
       }`}
     >
-      <div className="shell grid h-[var(--nav-h)] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-1.5 sm:gap-2">
-        {/* Left: hamburger (mobile/tablet) or desktop links */}
-        <div className="flex min-w-0 items-center justify-start">
+      <div className="shell relative flex h-[var(--nav-h)] items-center">
+        {/* Left: hamburger (mobile) or left nav links */}
+        <div className="z-[1] flex min-w-0 flex-1 items-center justify-start">
           <button
             type="button"
             className={`relative z-10 grid h-11 w-11 shrink-0 place-items-center rounded-[4px] xl:hidden ${
@@ -90,14 +97,12 @@ export function Header({ tone = "auto" }: { tone?: "auto" | "light" | "dark" }) 
             </span>
           </button>
 
-          <nav className="hidden min-w-0 items-center gap-2.5 xl:flex 2xl:gap-4">
-            {nav.map((item) => (
+          <nav className="hidden min-w-0 items-center gap-3 xl:flex 2xl:gap-5">
+            {navLeft.map((item) => (
               <TransitionLink
                 key={item.href}
                 href={item.href}
-                className={`whitespace-nowrap text-[0.86rem] tracking-[0.02em] transition-opacity hover:opacity-70 2xl:text-[0.94rem] ${
-                  light ? "text-[var(--ink)]" : "text-white"
-                }`}
+                className={linkClass}
               >
                 {t.nav[item.key]}
               </TransitionLink>
@@ -105,9 +110,10 @@ export function Header({ tone = "auto" }: { tone?: "auto" | "light" | "dark" }) 
           </nav>
         </div>
 
+        {/* Logo — true horizontal center of the bar */}
         <TransitionLink
           href="/"
-          className="relative z-[1] justify-self-center transition-transform duration-300 ease-out hover:scale-110"
+          className="absolute left-1/2 top-1/2 z-[2] -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-out hover:scale-110"
           aria-label={site.fullName}
           onClick={() => setMenuOpen(false)}
         >
@@ -118,8 +124,19 @@ export function Header({ tone = "auto" }: { tone?: "auto" | "light" | "dark" }) 
           />
         </TransitionLink>
 
-        <div className="flex shrink-0 items-center justify-end gap-1.5 sm:gap-2.5">
-          {/* Hidden only on very narrow phones; CTA also in the drawer below */}
+        {/* Right: remaining links + Book + language */}
+        <div className="z-[1] flex min-w-0 flex-1 items-center justify-end gap-2 sm:gap-2.5 xl:gap-3 2xl:gap-4">
+          <nav className="hidden min-w-0 items-center gap-3 xl:flex 2xl:gap-5">
+            {navRight.map((item) => (
+              <TransitionLink
+                key={item.href}
+                href={item.href}
+                className={linkClass}
+              >
+                {t.nav[item.key]}
+              </TransitionLink>
+            ))}
+          </nav>
           <BookButton
             source="navbar"
             className="btn btn-bronze !min-h-0 max-[359px]:hidden whitespace-nowrap px-2.5 py-2 text-[0.68rem] sm:px-4 sm:text-[0.75rem]"

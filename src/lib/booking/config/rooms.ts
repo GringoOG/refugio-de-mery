@@ -54,6 +54,20 @@ const ROOM_MAP: Record<RoomSlug, RoomProviderMap> = {
       query: { room: "triple-room" },
     },
   },
+  "single-room": {
+    [Provider.QLOAPPS]: {
+      externalId: env("NEXT_PUBLIC_BOOKING_ROOM_SINGLE_ROOM_PRODUCT_ID", "4"),
+      url: env("NEXT_PUBLIC_BOOKING_ROOM_SINGLE_ROOM_URL") || undefined,
+      query: {
+        id_product: env("NEXT_PUBLIC_BOOKING_ROOM_SINGLE_ROOM_PRODUCT_ID", "4"),
+      },
+    },
+    [Provider.CUSTOM]: {
+      externalId: "single-room",
+      path: "/reservations",
+      query: { room: "single-room" },
+    },
+  },
 };
 
 export function getMappedRoom(
