@@ -164,6 +164,7 @@ export function lodgingJsonLd() {
     url: siteUrl,
     image: [absoluteUrl(ogImagePath), absoluteUrl("/photos/about-farm.jpg")],
     email: site.email,
+    sameAs: [site.instagram],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Lucmabamba, Sahuayacu",

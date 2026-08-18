@@ -9,6 +9,8 @@ export const site = {
    * never publish placeholder digits (hurts trust + local SEO).
    */
   phone: "",
+  instagram: "https://www.instagram.com/perurefugiodemery/",
+  instagramHandle: "@perurefugiodemery",
   /** Farm pin used for embedded maps */
   lat: -13.212081,
   lng: -72.614829,
@@ -119,8 +121,8 @@ export const testimonials = [
     name: "Miroslav",
     from: "From Czech Republic",
     image: "/photos/testimonial-1.jpg",
-    width: 1800,
-    height: 1350,
+    width: 1050,
+    height: 1400,
   },
   {
     quote:

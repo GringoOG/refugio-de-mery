@@ -7,8 +7,8 @@ import { useLocale } from "@/lib/i18n";
 const media = [
   {
     image: "/photos/testimonial-1.jpg",
-    width: 1024,
-    height: 768,
+    width: 1050,
+    height: 1400,
   },
   {
     image: "/photos/testimonial-2.jpg",

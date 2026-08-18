@@ -69,9 +69,16 @@ export function Footer() {
         <div>
           <FooterHeading>{t.common.socials}</FooterHeading>
           <ul className="mt-4 space-y-2 text-[0.95rem] text-white/80">
-            <li>Instagram</li>
-            <li>WhatsApp</li>
-            <li>Facebook</li>
+            <li>
+              <a
+                href={site.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white"
+              >
+                Instagram
+              </a>
+            </li>
           </ul>
         </div>
 
